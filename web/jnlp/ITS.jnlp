@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://slidetutor.upmc.edu/tutorbuilder">
+	<information> 
+		<title>SlideTutor ITS</title> 
+		<vendor>University of Pittsburgh</vendor> 
+		<description>SlideTutor Domain Authoring System</description> 
+		<description kind="short">SlideTutor ITS</description> 
+		<icon href="http://slidetutor.upmc.edu/domainbuilder/images/logo.png"/> 
+		<offline-allowed/>
+	</information>
+	<security>
+    		<all-permissions/>
+    	</security>
+	<resources>
+		<j2se version="1.5+" max-heap-size="384m"/>
+		<jar href="lib/TutorBuilder.jar"/>
+		<jar href="lib/SlideViewer.jar"/>
+		<jar href="lib/xippix.jar"/>
+		<jar href="lib/spacetree-m.jar"/>
+		<jar href="lib/jdom.jar"/>
+		<jar href="lib/TextTools.jar"/>
+		<jar href="lib/specialistTextTools.jar"/> 
+		<jar href="lib/protege.jar"/> 
+		<jar href="lib/protege-owl.jar"/> 
+		<jar href="lib/protege-owl-inference.jar"/> 
+	</resources>
+	<application-desc main-class="edu.pitt.dbmi.tutor.ITS">
+		<argument>http://slidetutor.upmc.edu/tutorbuilder/config/SlideTutor.conf</argument> 
+	</application-desc>
+</jnlp> 

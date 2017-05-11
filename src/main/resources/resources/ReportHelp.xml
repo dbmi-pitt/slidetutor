@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ScenarioSet>
+  <ScenarioEntry code="2" name="Action Incomplete" type="Action">
+    <Description>
+      User has not even started doing the right action
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to evaluate &lt;feature&gt;, however &lt;concept&gt; is not the right value. It seems that &lt;feature&gt; was not properly &lt;action&gt; on the slide to evaluate it.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; from your report and make sure that &lt;feature&gt; is properly &lt;action&gt; on the slide before evaluating it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982195798") (source "ConsoleProtocolModule") (delay "1335982196464") (message_id "1577") (message_id "1577") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(8966, 8583, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982534358") (delay "200") (x "8966") (y "8583") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1551") (message_id "1551") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor-infiltrating_Lymphocytes") (action "Add") (id "Concept2") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept2") (entire_concept "Finding.Nonbrisk_Tumor-infiltrating_Lymphocytes.Concept1") (source "ConsoleProtocolModule") (timestamp "1335982196198") (delay "200") (text "nonbrisk tumor infiltrating lymphocytes") (length "39") (offset "107") (message_id "1588") (message_id "1588") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Nonbrisk") (action "Add") (parent "Finding.Tumor-infiltrating_Lymphocytes.Concept2") (id "Concept3") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept2:Attribute.Nonbrisk.Concept3") (entire_concept "Finding.Nonbrisk_Tumor-infiltrating_Lymphocytes.Concept1") (source "ConsoleProtocolModule") (timestamp "1335982196398") (delay "200") (message_id "1589") (message_id "1589") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335982196598") (source "ConsoleProtocolModule") (delay "600") (message_id "1710") (message_id "1710") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Measure HPF Done" type="Action">
+    <Description>
+      user has measured high power fields
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have observed ten distinct high powered fields. This should allow you to determine &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have observed ten distinct high powered fields. This should allow you to determine &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Measure MM2 Done" type="Action">
+    <Description>
+      user measured mm2
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have observed an area equivalent to a square millimeter at high power. This should allow you to determine &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have observed an area equivalent to a square millimeter at high power. This should allow you to determine &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Measure Ruler Done" type="Action">
+    <Description>
+      positive feedback on correct measurement
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have correctly measured &lt;feature&gt; at the same location as our expert pathologist. You should now be able to properly evaluate it.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have correctly measured &lt;feature&gt; at the same location as our expert pathologist. You should now be able to properly evaluate it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982062265") (source "ConsoleProtocolModule") (delay "1335982062931") (message_id "1494") (message_id "1494") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5498, 8129, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982062465") (delay "200") (x "5498") (y "8129") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1508") (message_id "1508") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (9722, 9793) (9834, 12561)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335982062665") (delay "200") (x1 "9722") (y2 "12561") (x2 "9834") (message_id "1531") (message_id "1531") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335982062865") (source "ConsoleProtocolModule") (delay "200") (message_id "1734") (message_id "1734") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Measure Ruler Incorrect Angle" type="Action">
+    <Description>
+      measuring in not optimal location
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are in the right area to measure &lt;feature&gt;, however you ruler is not at the proper angle to measure &lt;feature&gt; correctly.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is where &lt;feature&gt; was &lt;action&gt; by our expert pathologist.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982062265") (source "ConsoleProtocolModule") (delay "1335982062931") (message_id "1494") (message_id "1494") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5498, 8129, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982062465") (delay "200") (x "5498") (y "8129") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1508") (message_id "1508") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (8362, 11185) (10602, 11057)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335982062665") (delay "-32696") (x1 "8362") (y2 "11057") (x2 "10602") (message_id "1528") (message_id "1528") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335982062865") (source "ConsoleProtocolModule") (delay "167629") (message_id "1773") (message_id "1773") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Measure Ruler Incorrect Location" type="Action">
+    <Description>
+      measuring in incorrect location
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You don't seem to be measuring in correct location.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          It looks like &lt;feature&gt; is the nearest feature that can be &lt;action&gt;.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the lesion that you want to measure. Try to find the best location to measure it.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is where &lt;feature&gt; was &lt;action&gt; by our expert pathologist.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982062265") (source "ConsoleProtocolModule") (delay "1335982062931") (message_id "1494") (message_id "1494") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5168, 8055, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981846126") (delay "-77079") (x "5168") (y "8055") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1405") (message_id "1405") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (6794, 7201) (7402, 9521)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335982062665") (delay "-26446") (x1 "6794") (y2 "9521") (x2 "7402") (message_id "1503") (message_id "1503") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335982062865") (source "ConsoleProtocolModule") (delay "238858") (message_id "1787") (message_id "1787") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Measure Ruler Incorrect Size" type="Action">
+    <Description>
+      measuring within the recommended area but underestimating the span of the micrometer
+(inside the rectangle but not crossing the borders)
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The correct area is being measured, but the end points of the micrometer are not positioned correctly, so you are not estimating the &lt;feature&gt; correctly.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is where &lt;feature&gt; was &lt;action&gt; by our expert pathologist.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982062265") (source "ConsoleProtocolModule") (delay "1335982062931") (message_id "1494") (message_id "1494") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5498, 8129, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982062465") (delay "200") (x "5498") (y "8129") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1508") (message_id "1508") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (9466, 10289) (9546, 11953)") (action "Measure") (source "ReportInterface") (timestamp "1335982062665") (x1 "9466") (y2 "11953") (x2 "9546") (message_id "1525") (message_id "1525") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="3" name="Observe All Done" type="Action">
+    <Description>
+      positive feeback on margin measurement
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have looked at all necessary &lt;defined_feature&gt;. This should allow you to determine their status.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You seem to have looked at all necessary &lt;defined_feature&gt;. This should allow you to determine their status.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute Negation is Incorrect" type="Attribute">
+    <Description>
+      You have implied finding as absent, when it is not
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You have stated that there is NO &lt;concept&gt; in you report. Actually, &lt;concept&gt; is present in this case, and is an important prognostic factor to report
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Actually, &lt;concept&gt; is an important prognostic feature that is present in this case and should be reported on.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You can generally observe &lt;concept&gt; here.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an example of  &lt;concept&gt;.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Remove the negation of &lt;concept&gt; from your report.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Ulceration") (action "Add") (id "Concept33") (object_description "Finding.Ulceration.Concept33") (entire_concept "Finding.Ulceration.Concept33") (source "ReportInterface") (timestamp "1335980996882") (text "ulceration") (length "10") (offset "110") (message_id "775") (message_id "775") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Ulceration.Concept33") (id "Concept34") (object_description "Finding.Ulceration.Concept33:Attribute.NO.Concept34") (entire_concept "Finding.Ulceration.Concept33") (source "ReportInterface") (timestamp "1335980997082") (message_id "778") (message_id "778") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute Not Valid" type="Attribute">
+    <Description>
+      Attribute is not valid. That is there is no such finding that includes it:
+Ex: moderate blister
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain, &lt;concept&gt; is not a valid qualifier of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="5" name="Attribute Numeric Value is Incorrect" type="Attribute">
+    <Description>
+      Incorrect numeric attribute was given
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to evaluate &lt;feature&gt;, however &lt;value&gt; is not a correct value. Perhaps you have not &lt;action&gt; it correctly.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The correct value is &lt;correct_value&gt;
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981845926") (message_id "1188") (message_id "1188") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5168, 8055, 0.06)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981846126") (delay "-77079") (x "5168") (y "8055") (width "8816") (height "6768") (scale "0.06") (auto "false") (message_id "1405") (message_id "1405") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Maximum_Tumor_Thickness") (action "Add") (id "Concept31") (object_description "Finding.Maximum_Tumor_Thickness.Concept31") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=2.3.Concept30") (source "ReportInterface") (timestamp "1335981846326") (text "depth invasion 2.3 mm") (length "27") (offset "107") (message_id "1442") (message_id "1442") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Mm") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept31") (id "Concept32") (object_description "Finding.Maximum_Tumor_Thickness.Concept31:Attribute.Mm.Concept32") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=2.3.Concept30") (source "ReportInterface") (timestamp "1335981846526") (message_id "1445") (message_id "1445") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Number=2.3") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept31") (id "Concept33") (object_description "Finding.Maximum_Tumor_Thickness.Concept31:Attribute.Number=2.3.Concept33") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=2.3.Concept30") (source "ReportInterface") (timestamp "1335981846726") (message_id "1446") (message_id "1446") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute Set Not Valid" type="Attribute">
+    <Description>
+      No finding exists that includes the given set of attribute values.
+It may be valid attribute if put in as a separate finding 
+Ex: [subepidermal blister, intraepidermal] VS [subepidremal blister] and [inraepidermal blister] concept
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain, &lt;concept&gt; in conjunction with &lt;finding&gt; is not a valid finding that is understood by the system. However it may be a valid evidence if it is asserted along with another instance of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You may also try to assert another instance of &lt;feature&gt; qualified with &lt;concept&gt; attribute.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute Value is Incorrect" type="Attribute">
+    <Description>
+      Attribute value is incorrect, but the user is on the right track.
+Ex: user picks incorrect QUANTITY.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;attribute&gt; of &lt;feature&gt;, however &lt;concept&gt; is not the best way to describe &lt;attribute&gt; in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; from the description of &lt;feature&gt;, and assert correct &lt;attribute&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Margins") (action "Add") (id "Concept25") (object_description "Finding.Margins.Concept25") (entire_concept "Finding.Deep_Margin_Uninvolved.Concept24") (source "ReportInterface") (timestamp "1335980996882") (text "deep margins uninvolved") (length "23") (offset "107") (message_id "736") (message_id "736") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Deep") (action "Add") (parent "Finding.Margins.Concept25") (id "Concept26") (object_description "Finding.Margins.Concept25:Attribute.Deep.Concept26") (entire_concept "Finding.Deep_Margin_Uninvolved.Concept24") (source "ReportInterface") (timestamp "1335980997082") (message_id "739") (message_id "739") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Uninvolved") (action "Add") (parent "Finding.Margins.Concept25") (id "Concept27") (object_description "Finding.Margins.Concept25:Attribute.Uninvolved.Concept27") (entire_concept "Finding.Deep_Margin_Uninvolved.Concept24") (source "ReportInterface") (timestamp "1335980997282") (message_id "740") (message_id "740") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute is Incorrect" type="Attribute">
+    <Description>
+      The modifier is not the correct way to specify a feature in this case
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this case, &lt;concept&gt; is not the best way to describe &lt;feature&gt;
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; as the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Attribute is Not Important" type="Attribute">
+    <Description>
+      The user was more specific then is required by case
+Ex: subepidermal blister is required by case, but user puts in
+subepidermal blister extend beyound ...
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          While &lt;concept&gt; might be an important quality of &lt;feature&gt; in a different context, it is unnecessary in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Diagnosis Not Specific Enough" type="Diagnosis">
+    <Description>
+      Diagnosis is on the right path, but has not reached the right DX yet.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct, this is a case of &lt;concept&gt;. However you should specify it further to make it a more meaningful diagnosis.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct, this is a case of &lt;concept&gt;. However you should specify it further to make it a more meaningful diagnosis.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Diagnosie that are more specific then &lt;concept&gt; are: &lt;potential_diagnoses&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;diagnosis&gt; is the correct diagnosis for this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "MALIGNANT_MELANOMA") (action "Add") (id "Concept5") (object_description "Diagnosis.MALIGNANT_MELANOMA.Concept5") (entire_concept "Diagnosis.MALIGNANT_MELANOMA.Concept5") (source "ReportInterface") (timestamp "1335980996882") (text "malignant melanoma") (length "18") (offset "107") (message_id "542") (message_id "542") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Diagnosis is Incorrect" type="Diagnosis">
+    <Description>
+      Diagnosis is not correct diagnosis nor is on the path to it
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a correct diagnosis for this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a correct diagnosis for this case.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You should remove &lt;concept&gt; and try to come up with the correct diagnoses.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "MELANOCYTIC_NEVUS") (action "Add") (id "Concept6") (object_description "Diagnosis.MELANOCYTIC_NEVUS.Concept6") (entire_concept "Diagnosis.MELANOCYTIC_NEVUS.Concept6") (source "ReportInterface") (timestamp "1335980996882") (text "melanocytic nevus") (length "17") (offset "107") (message_id "552") (message_id "552") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Diagnosis is Too General" type="Diagnosis">
+    <Description>
+      Dx class is on the trunk Dx tree right before divergence
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis  &lt;concept&gt; is too general to be useful.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; or specify it further to make it a meaningful diagnosis.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "MELANOCYTIC_LESION") (action "Add") (id "Concept8") (object_description "Diagnosis.MELANOCYTIC_LESION.Concept8") (entire_concept "Diagnosis.MELANOCYTIC_LESION.Concept8") (source "ReportInterface") (timestamp "1335980996882") (text "melanocytic lesion") (length "18") (offset "107") (message_id "572") (message_id "572") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Diagnosis is Too Specific" type="Diagnosis">
+    <Description>
+      Dx is more specific the required
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis &lt;concept&gt; is correct, however it is more specific than the evidence suggests in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis &lt;concept&gt; is correct, however it is more specific than the evidence suggests in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Case Not Solved" type="Done">
+    <Description>
+      Case has not been solved yet
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The case report is not complete yet, You need to address all of the outstanding issues as well as put all relevant reportable findings that are required by a reporting template.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Done") (label "ReportInterface") (action "Summary") (source "ReportInterface") (timestamp "1335980996882") (message_id "590") (message_id "590") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Finding Not in Case" type="Finding">
+    <Description>
+      This finding is not mentioned in the case
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain and case, &lt;concept&gt; is not something that was mentined by the expert in this case nor listed as necessary prognostic factor in the reporting template
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain and case, &lt;concept&gt; is not something that was mentined by the expert in this case nor listed as necessary prognostic factor in the reporting template
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Melanophages") (action "Add") (id "Concept12") (object_description "Finding.Melanophages.Concept12") (entire_concept "Finding.Melanophages.Concept12") (source "ReportInterface") (timestamp "1335980996882") (text "melanophages") (length "12") (offset "107") (message_id "607") (message_id "607") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Finding is Incorrect" type="Finding">
+    <Description>
+      The finding belongs to a template that should be mentioned in the report yet is incorrect value
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to talk about &lt;template&gt;, however &lt;concept&gt; is not the right &lt;template&gt; in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; from your report
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Biopsy") (action "Add") (id "Concept15") (object_description "Finding.Biopsy.Concept15") (entire_concept "Finding.Biopsy.Concept15") (source "ReportInterface") (timestamp "1335980996882") (text "biopsy") (length "6") (offset "107") (message_id "649") (message_id "649") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335980997082") (message_id "1482") (message_id "1482") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Finding is Too General" type="Finding">
+    <Description>
+      Finding is too general to be meaningful
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are on the right track, however finding &lt;concept&gt; is too general to be a meaningful prognostic factor.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; should be mentioned in the report, however it must be specified further to make it a more meaningful prognostic factor.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Some possibilities are: &lt;children&gt; .
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In the context of this case &lt;finding&gt; is the best way to describe this feature.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "ARCHITECTURAL_FEATURES") (action "Add") (id "Concept18") (object_description "Finding.ARCHITECTURAL_FEATURES.Concept18") (entire_concept "Finding.ARCHITECTURAL_FEATURES.Concept18") (source "ReportInterface") (timestamp "1335980996882") (text "architectural feature") (length "21") (offset "107") (message_id "704") (message_id "704") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="7" name="Case Solved" type="Hint">
+    <Description>
+      all features are listed, press SUBMIT
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You've listed all important prognostic features. Press &lt;b&gt;Check Report&lt;/b&gt; button to check if you are done with the report. Then go to &lt;b&gt;Finish Case&lt;/b&gt; tab to proceed to the next problem.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982614083") (source "ConsoleProtocolModule") (delay "1335982614749") (message_id "1897") (message_id "1897") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982614283") (delay "3400") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Skin") (action "Add") (id "Concept1") (object_description "Finding.Skin.Concept1") (entire_concept "Finding.Skin.Concept1") (source "ConsoleProtocolModule") (timestamp "1335982614483") (delay "-3000") (delay "-3000") (text "skin") (length "4") (offset "107") (message_id "1909") (message_id "1909") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982614683") (delay "3000") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Foot_Location=Right_Foot") (action "Add") (id "Concept2") (object_description "Finding.Foot_Location=Right_Foot.Concept2") (entire_concept "Finding.Foot_Location=Right_Foot.Concept2") (source "ConsoleProtocolModule") (timestamp "1335982614883") (delay "-2600") (delay "-2600") (text "right foot") (length "4") (offset "119") (message_id "1912") (message_id "1912") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982615083") (delay "2600") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Excision") (action "Add") (id "Concept3") (object_description "Finding.Excision.Concept3") (entire_concept "Finding.Excision.Concept3") (source "ConsoleProtocolModule") (timestamp "1335982615283") (delay "-2200") (delay "-2200") (text "excision") (length "8") (offset "125") (message_id "1916") (message_id "1916") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS") (action "Add") (id "Concept4") (object_description "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (entire_concept "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (source "ConsoleProtocolModule") (timestamp "1335982615483") (delay "200") (delay "200") (text "insitu invasive melanoma") (length "28") (offset "134") (message_id "1920") (message_id "1920") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982615683") (delay "2000") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Ulceration") (action "Add") (id "Concept5") (object_description "Finding.Ulceration.Concept5") (entire_concept "Finding.Ulceration.Concept5") (source "ConsoleProtocolModule") (timestamp "1335982615883") (delay "-1600") (delay "-1600") (text "ulceration") (length "10") (offset "163") (message_id "1924") (message_id "1924") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982616083") (delay "1600") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept8") (object_description "Finding.Growth_Phase.Concept8") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616283") (delay "-1200") (delay "-1200") (text "no radial growth phase") (length "19") (offset "177") (message_id "1928") (message_id "1928") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Radial") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept9") (object_description "Finding.Growth_Phase.Concept8:Attribute.Radial.Concept9") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616483") (delay "200") (delay "200") (message_id "1930") (message_id "1930") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept10") (object_description "Finding.Growth_Phase.Concept8:Attribute.NO.Concept10") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616683") (delay "200") (delay "200") (message_id "1931") (message_id "1931") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982616883") (delay "800") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept13") (object_description "Finding.Growth_Phase.Concept13") (entire_concept "Finding.Vertical_Growth_Phase.Concept12") (source "ConsoleProtocolModule") (timestamp "1335982617083") (delay "-400") (delay "-400") (text "vertical growth phase") (length "21") (offset "197") (message_id "1945") (message_id "1945") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Vertical") (action "Add") (parent "Finding.Growth_Phase.Concept13") (id "Concept14") (object_description "Finding.Growth_Phase.Concept13:Attribute.Vertical.Concept14") (entire_concept "Finding.Vertical_Growth_Phase.Concept12") (source "ConsoleProtocolModule") (timestamp "1335982617283") (delay "200") (delay "200") (message_id "1948") (message_id "1948") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Anatomic_Level") (action "Add") (id "Concept16") (object_description "Finding.Anatomic_Level.Concept16") (entire_concept "Finding.Anatomic_Level_Four.Concept15") (source "ConsoleProtocolModule") (timestamp "1335982617683") (delay "200") (delay "200") (text "clark's level IV") (length "8") (offset "227") (message_id "1954") (message_id "1954") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Four") (action "Add") (parent "Finding.Anatomic_Level.Concept16") (id "Concept17") (object_description "Finding.Anatomic_Level.Concept16:Attribute.Four.Concept17") (entire_concept "Finding.Anatomic_Level_Four.Concept15") (source "ConsoleProtocolModule") (timestamp "1335982617883") (delay "200") (delay "200") (message_id "1957") (message_id "1957") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (10099, 9625) (10163, 12601)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335982618083") (delay "200") (delay "200") (x1 "10099") (y2 "12601") (x2 "10163") (message_id "1964") (message_id "1964") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Maximum_Tumor_Thickness") (action "Add") (id "Concept20") (object_description "Finding.Maximum_Tumor_Thickness.Concept20") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618283") (delay "200") (delay "200") (text "depth invasion 1.3 mm") (length "27") (offset "236") (message_id "1971") (message_id "1971") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Mm") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept20") (id "Concept21") (object_description "Finding.Maximum_Tumor_Thickness.Concept20:Attribute.Mm.Concept21") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618483") (delay "200") (delay "200") (message_id "1974") (message_id "1974") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Number=1.3") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept20") (id "Concept22") (object_description "Finding.Maximum_Tumor_Thickness.Concept20:Attribute.Number=1.3.Concept22") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618683") (delay "200") (delay "200") (message_id "1975") (message_id "1975") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mitotic_Index") (action "Add") (id "Concept26") (object_description "Finding.Mitotic_Index.Concept26") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982618883") (delay "600") (delay "200") (text "mitotic index 7 per mm2") (length "26") (offset "264") (message_id "1990") (message_id "1990") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Number=7.0") (action "Add") (parent "Finding.Mitotic_Index.Concept26") (id "Concept27") (object_description "Finding.Mitotic_Index.Concept26:Attribute.Number=7.0.Concept27") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982619083") (delay "200") (delay "200") (message_id "1991") (message_id "1991") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Per_Mm2") (action "Add") (parent "Finding.Mitotic_Index.Concept26") (id "Concept28") (object_description "Finding.Mitotic_Index.Concept26:Attribute.Per_Mm2.Concept28") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982619283") (delay "200") (delay "200") (message_id "1992") (message_id "1992") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor-infiltrating_Lymphocytes") (action "Add") (id "Concept32") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept32") (entire_concept "Finding.Brisk_Tumor-infiltrating_Lymphocytes.Concept31") (source "ConsoleProtocolModule") (timestamp "1335982619483") (delay "200") (delay "200") (text "brisk tumor infiltrating lymphocytes") (length "36") (offset "291") (message_id "2002") (message_id "2002") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Brisk") (action "Add") (parent "Finding.Tumor-infiltrating_Lymphocytes.Concept32") (id "Concept33") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept32:Attribute.Brisk.Concept33") (entire_concept "Finding.Brisk_Tumor-infiltrating_Lymphocytes.Concept31") (source "ConsoleProtocolModule") (timestamp "1335982619683") (delay "200") (delay "200") (message_id "2003") (message_id "2003") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymph-vascular_Invasion") (action "Add") (id "Concept35") (object_description "Finding.Lymph-vascular_Invasion.Concept35") (entire_concept "Finding.Lymph-vascular_Invasion.Concept35") (source "ConsoleProtocolModule") (timestamp "1335982619883") (delay "200") (delay "200") (text "no lymph vascular invasion") (length "22") (offset "331") (message_id "2010") (message_id "2010") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Lymph-vascular_Invasion.Concept35") (id "Concept36") (object_description "Finding.Lymph-vascular_Invasion.Concept35:Attribute.NO.Concept36") (entire_concept "Finding.Lymph-vascular_Invasion.Concept35") (source "ConsoleProtocolModule") (timestamp "1335982620083") (delay "200") (delay "200") (message_id "2011") (message_id "2011") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor_Regression") (action "Add") (id "Concept38") (object_description "Finding.Tumor_Regression.Concept38") (entire_concept "Finding.Tumor_Regression.Concept38") (source "ConsoleProtocolModule") (timestamp "1335982620283") (delay "200") (delay "200") (text "no tumor regression") (length "16") (offset "357") (message_id "2018") (message_id "2018") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Tumor_Regression.Concept38") (id "Concept39") (object_description "Finding.Tumor_Regression.Concept38:Attribute.NO.Concept39") (entire_concept "Finding.Tumor_Regression.Concept38") (source "ConsoleProtocolModule") (timestamp "1335982620483") (delay "200") (delay "200") (message_id "2019") (message_id "2019") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Perineural_Invasion") (action "Add") (id "Concept41") (object_description "Finding.Perineural_Invasion.Concept41") (entire_concept "Finding.Perineural_Invasion.Concept41") (source "ConsoleProtocolModule") (timestamp "1335982620683") (delay "200") (delay "200") (text "no perineural invasion") (length "19") (offset "377") (message_id "2026") (message_id "2026") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Perineural_Invasion.Concept41") (id "Concept42") (object_description "Finding.Perineural_Invasion.Concept41:Attribute.NO.Concept42") (entire_concept "Finding.Perineural_Invasion.Concept41") (source "ConsoleProtocolModule") (timestamp "1335982620883") (delay "200") (delay "200") (message_id "2027") (message_id "2027") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Microsatellitosis") (action "Add") (id "Concept44") (object_description "Finding.Microsatellitosis.Concept44") (entire_concept "Finding.Microsatellitosis.Concept44") (source "ConsoleProtocolModule") (timestamp "1335982621083") (delay "200") (delay "200") (text "no microsatellitosis") (length "17") (offset "400") (message_id "2034") (message_id "2034") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Microsatellitosis.Concept44") (id "Concept45") (object_description "Finding.Microsatellitosis.Concept44:Attribute.NO.Concept45") (entire_concept "Finding.Microsatellitosis.Concept44") (source "ConsoleProtocolModule") (timestamp "1335982621283") (delay "200") (delay "200") (message_id "2035") (message_id "2035") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Margins") (action "Add") (id "Concept48") (object_description "Finding.Margins.Concept48") (entire_concept "Finding.Margins_Involved.Concept47") (source "ConsoleProtocolModule") (timestamp "1335982621483") (delay "200") (delay "200") (text "margins involved") (length "16") (offset "422") (message_id "2050") (message_id "2050") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Involved") (action "Add") (parent "Finding.Margins.Concept48") (id "Concept49") (object_description "Finding.Margins.Concept48:Attribute.Involved.Concept49") (entire_concept "Finding.Margins_Involved.Concept47") (source "ConsoleProtocolModule") (timestamp "1335982621683") (delay "200") (delay "200") (message_id "2053") (message_id "2053") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "pT2b") (action "Add") (id "Concept51") (object_description "Finding.pT2b.Concept51") (entire_concept "Finding.pT2b.Concept51") (source "ConsoleProtocolModule") (timestamp "1335982621883") (delay "200") (delay "200") (text "pT2b") (length "4") (offset "439") (message_id "2077") (message_id "2077") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "pNX") (action "Add") (id "Concept52") (object_description "Finding.pNX.Concept52") (entire_concept "Finding.pNX.Concept52") (source "ConsoleProtocolModule") (timestamp "1335982622083") (delay "200") (delay "200") (text "pNX") (length "3") (offset "444") (message_id "2083") (message_id "2083") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "pMX") (action "Add") (id "Concept53") (object_description "Finding.pMX.Concept53") (entire_concept "Finding.pMX.Concept53") (source "ConsoleProtocolModule") (timestamp "1335982622283") (delay "200") (delay "200") (text "pMX") (length "3") (offset "448") (message_id "2086") (message_id "2086") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335982622483") (delay "200") (delay "200") (message_id "2091") (message_id "2091") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335982622683") (delay "200") (delay "200") (message_id "2094") (message_id "2094") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "finished") (username "guest") (condition "Immediate") (timestamp "1335982622883") (source "ConsoleProtocolModule") (delay "6000") (message_id "2098") (message_id "2098") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Action" type="Hint">
+    <Description>
+      need to accomplish actions before
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;concept&gt; in your report. However to make it a meaningful prognostic factor, you need to measure it in order to report on its value.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area where &lt;concept&gt; can be &lt;action&gt;. It should be &lt;action&gt; using at least &lt;power&gt; power.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is a part of the slide where &lt;concept&gt; can be &lt;action&gt; particularly well.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981845926") (message_id "1188") (message_id "1188") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7434, 9543, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981291566") (delay "200") (x "7434") (y "9543") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1006") (message_id "1006") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor-infiltrating_Lymphocytes") (action "Add") (id "Concept3") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept3") (entire_concept "Finding.Tumor-infiltrating_Lymphocytes.Concept3") (source "ReportInterface") (timestamp "1335981846326") (text "tumor infiltrating lymphocytes") (length "30") (offset "107") (message_id "1226") (message_id "1226") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981846526") (message_id "1230") (message_id "1230") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 4") (action "Request") (source "HelpManager") (timestamp "1335981846726") (message_id "1233") (message_id "1233") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 4") (action "Request") (source "HelpManager") (timestamp "1335981846926") (message_id "1236") (message_id "1236") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 4") (action "Request") (source "HelpManager") (timestamp "1335981847126") (message_id "1239") (message_id "1239") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 4") (action "Request") (source "HelpManager") (timestamp "1335981847326") (message_id "1244") (message_id "1244") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Attribute" type="Hint">
+    <Description>
+      need to specify further
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;defined_feature&gt; in your report. However, you need to report on its &lt;attribute&gt; to make it a meaningful prognostic factor.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Some possible values that &lt;defined_feature&gt; can take are: &lt;attribute_values&gt; .
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In the context of this case, &lt;finding&gt; is the best way to describe this feature.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981845926") (message_id "1188") (message_id "1188") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16814, 15589, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1335981846126") (x "16814") (y "15589") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "1278") (message_id "1278") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor-infiltrating_Lymphocytes") (action "Add") (id "Concept5") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept5") (entire_concept "Finding.Tumor-infiltrating_Lymphocytes.Concept5") (source "ReportInterface") (timestamp "1335981846326") (text "tumor infiltrating lymphocytes") (length "30") (offset "107") (message_id "1282") (message_id "1282") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981846526") (message_id "1286") (message_id "1286") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1335981846726") (message_id "1289") (message_id "1289") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1335981846926") (message_id "1292") (message_id "1292") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1335981847126") (message_id "1295") (message_id "1295") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Defining Attribute" type="Hint">
+    <Description>
+      There are several findings that match that feature, so need to specify the attribute that can distinguish them.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There are several instances of &lt;feature&gt; that should be mentioned in your report. You need to specify which &lt;feature&gt; you are talking about by adding additional qualities.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You need to specify which &lt;feature&gt; you are talking about by adding one of the following qualities: &lt;defining_attributes&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You can add &lt;defined_feature&gt; to your report as one possibility.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981291366") (source "ConsoleProtocolModule") (delay "1335981292032") (message_id "902") (message_id "902") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7434, 9543, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981291566") (delay "200") (x "7434") (y "9543") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1006") (message_id "1006") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Margins") (action "Add") (id "Concept21") (object_description "Finding.Margins.Concept21") (entire_concept "Finding.Margins.Concept21") (source "ReportInterface") (timestamp "1335981291766") (text "margins") (length "7") (offset "108") (message_id "1159") (message_id "1159") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981291966") (message_id "1163") (message_id "1163") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292166") (message_id "1166") (message_id "1166") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292366") (message_id "1169") (message_id "1169") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292566") (message_id "1172") (message_id "1172") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="6" name="Missing Diagnosis" type="Hint">
+    <Description>
+      You need to specify a diagnosis
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          All medical reports must have a final diagnosis listed. You need to state a final diagnosis in your report.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          There are important visual cues that you should look for on the digital slide to come up with the final diagnosis. If you are unsure what the diagnosis is,  you should try solving this case in the diagnostic tutor. &lt;a href="SlideTutor.conf"&gt;Click here&lt;/a&gt; to do that.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          If you look at the digital slide carefuly, you can see a number of features: &lt;findings&gt;. What diagnosis has these features?
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; has all of the expected features. This would be a reasonable diagnosis in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Skin") (action "Add") (id "Concept1") (object_description "Finding.Skin.Concept1") (entire_concept "Finding.Skin.Concept1") (source "ReportInterface") (timestamp "1335980996882") (text "skin") (length "4") (offset "107") (message_id "473") (message_id "473") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Foot_Location=Right_Foot") (action "Add") (id "Concept2") (object_description "Finding.Foot_Location=Right_Foot.Concept2") (entire_concept "Finding.Foot_Location=Right_Foot.Concept2") (source "ReportInterface") (timestamp "1335980997082") (text "foot") (length "4") (offset "119") (message_id "476") (message_id "476") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Excision") (action "Add") (id "Concept3") (object_description "Finding.Excision.Concept3") (entire_concept "Finding.Excision.Concept3") (source "ReportInterface") (timestamp "1335980997282") (text "excision") (length "8") (offset "125") (message_id "480") (message_id "480") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335980997482") (message_id "483") (message_id "483") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 4") (action "Request") (source "HelpManager") (timestamp "1335980997682") (message_id "485") (message_id "485") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 4") (action "Request") (source "HelpManager") (timestamp "1335980997882") (message_id "488") (message_id "488") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 4") (action "Request") (source "HelpManager") (timestamp "1335980998082") (message_id "491") (message_id "491") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 4") (action "Request") (source "HelpManager") (timestamp "1335980998282") (message_id "494") (message_id "494") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="5" name="Missing Finding" type="Hint">
+    <Description>
+      more features needs to be identified
+it has not been observed
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There's something important to recognize here.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area where you should be able to evaluate &lt;feature&gt; [&lt;a href="definition"&gt;1&lt;/a&gt;]
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an example where &lt;feature&gt; can be &lt;action&gt; particularly well.
+        </Message>
+        <Action action="showAnnotation" input="example_no_ruler" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You should mention &lt;feature&gt; in your report.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Skin") (action "Add") (id "Concept1") (object_description "Finding.Skin.Concept1") (entire_concept "Finding.Skin.Concept1") (source "ReportInterface") (timestamp "1335980996882") (text "skin") (length "4") (offset "107") (message_id "473") (message_id "473") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Foot_Location=Right_Foot") (action "Add") (id "Concept2") (object_description "Finding.Foot_Location=Right_Foot.Concept2") (entire_concept "Finding.Foot_Location=Right_Foot.Concept2") (source "ReportInterface") (timestamp "1335980997082") (text "right foot") (length "4") (offset "119") (message_id "476") (message_id "476") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Excision") (action "Add") (id "Concept3") (object_description "Finding.Excision.Concept3") (entire_concept "Finding.Excision.Concept3") (source "ReportInterface") (timestamp "1335980997282") (text "excision") (length "8") (offset "125") (message_id "480") (message_id "480") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS") (action "Add") (id "Concept4") (object_description "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (entire_concept "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (source "ReportInterface") (timestamp "1335980997482") (text "situ invasive melanoma") (length "26") (offset "137") (message_id "498") (message_id "498") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335980997682") (message_id "502") (message_id "502") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 4") (action "Request") (source "HelpManager") (timestamp "1335980997882") (message_id "506") (message_id "506") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 4") (action "Request") (source "HelpManager") (timestamp "1335980998082") (message_id "511") (message_id "511") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 4") (action "Request") (source "HelpManager") (timestamp "1335980998282") (message_id "516") (message_id "516") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 4") (action "Request") (source "HelpManager") (timestamp "1335980998482") (message_id "521") (message_id "521") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="5" name="Missing HPF Action" type="Hint">
+    <Description>
+      Need to do an HPF measurement
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          In oder to correctly evaluate &lt;feature&gt;, it should be properly &lt;action&gt; first.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is an area where you need to observe 10 non overlapping high power fields at maxium zoom level.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is an example of what you should be counting while looking at the slide at  high power.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="4" name="Missing Header" type="Hint">
+    <Description>
+      You are missing report header: Ex: tissue, location, procedure
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          It is common practice to start all reports with a line indicating tissue type, tissue location, and the procedure that was used.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You are missing &lt;template&gt; from your report. What is the &lt;template&gt;?
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is the correct &lt;template&gt; that is missing from your report.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335979469423") (message_id "431") (message_id "431") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335979469623") (message_id "437") (message_id "437") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "HelpManager") (timestamp "1335979469823") (message_id "439") (message_id "439") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335979470023") (message_id "442") (message_id "442") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1335979470223") (message_id "445") (message_id "445") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1335979470423") (message_id "448") (message_id "448") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1335979470623") (message_id "451") (message_id "451") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing MM2 Action" type="Hint">
+    <Description>
+      Use haven't covered mm^2 at sufficient power
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          In oder to correctly evaluate &lt;feature&gt;, it should be properly &lt;action&gt; first.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is a location where you need to observe an a area, that is equivalent to a square millimeter, at high power (maximum zoom level) .
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is an example of what you should be counting while exploring the area at high power.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981291366") (source "ConsoleProtocolModule") (delay "1335981292032") (message_id "902") (message_id "902") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7434, 9543, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981291566") (delay "200") (x "7434") (y "9543") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1006") (message_id "1006") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mitotic_Index") (action "Add") (id "Concept18") (object_description "Finding.Mitotic_Index.Concept18") (entire_concept "Finding.Mitotic_Index.Concept18") (source "ConsoleProtocolModule") (timestamp "1335981291766") (delay "200") (text "mitotic index") (length "13") (offset "107") (message_id "1116") (message_id "1116") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335981291966") (delay "200") (message_id "1120") (message_id "1120") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 4") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335981292166") (delay "200") (message_id "1123") (message_id "1123") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 4") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335981292366") (delay "200") (message_id "1126") (message_id "1126") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 4") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335981292566") (delay "200") (message_id "1129") (message_id "1129") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 4") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335981292766") (delay "200") (message_id "1132") (message_id "1132") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335981292966") (source "ConsoleProtocolModule") (delay "200") (message_id "1662") (message_id "1662") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Missing Modifier" type="Hint">
+    <Description>
+      Missing a modifier
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;defined_feature&gt; in your report. However you should specify it further to make it a meaningful prognostic factor.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          To further specify &lt;defined_feature&gt; you need to add qualities to it. Some possible qualities are: &lt;potential_attributes&gt; .
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In the context of this case &lt;finding&gt; is the best way to describe this feature.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Negation" type="Hint">
+    <Description>
+      You have not mentioned that the finding is absent
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You incorrectly implied the presence of &lt;concept&gt;, in this case, &lt;concept&gt; is absent and should be stated as such.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Please state that there is &lt;finding&gt; in your report.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981291366") (source "ConsoleProtocolModule") (delay "1335981292032") (message_id "902") (message_id "902") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7434, 9543, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981291566") (delay "200") (x "7434") (y "9543") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1006") (message_id "1006") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept8") (object_description "Finding.Growth_Phase.Concept8") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ReportInterface") (timestamp "1335981291766") (text "radial growth phase") (length "19") (offset "107") (message_id "1010") (message_id "1010") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Radial") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept9") (object_description "Finding.Growth_Phase.Concept8:Attribute.Radial.Concept9") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ReportInterface") (timestamp "1335981291966") (message_id "1011") (message_id "1011") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981292166") (message_id "1017") (message_id "1017") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 2") (action "Request") (source "HelpManager") (timestamp "1335981292366") (message_id "1020") (message_id "1020") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 2") (action "Request") (source "HelpManager") (timestamp "1335981292566") (message_id "1023") (message_id "1023") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="4" name="Missing Observe All Action" type="Hint">
+    <Description>
+      need to observe all regions of a given feature
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          In oder to correctly evaluate &lt;defined_feature&gt;, it should be properly &lt;action&gt; first.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is a location where you can observe &lt;feature&gt;.  You need to observe all such regions at &lt;power&gt; power  to correctly evaluate &lt;feature&gt;.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Here is another region that has not been observed yet.
+        </Message>
+        <Action action="showAnnotation" input="location_not_seen" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981291366") (source "ConsoleProtocolModule") (delay "1335981292032") (message_id "902") (message_id "902") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7434, 9543, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335981291566") (delay "200") (x "7434") (y "9543") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1006") (message_id "1006") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Margins") (action "Add") (id "Concept15") (object_description "Finding.Margins.Concept15") (entire_concept "Finding.Peripheral_Margin.Concept14") (source "ReportInterface") (timestamp "1335981291766") (text "lateral margins") (length "15") (offset "107") (message_id "1059") (message_id "1059") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Peripheral") (action "Add") (parent "Finding.Margins.Concept15") (id "Concept16") (object_description "Finding.Margins.Concept15:Attribute.Peripheral.Concept16") (entire_concept "Finding.Peripheral_Margin.Concept14") (source "ReportInterface") (timestamp "1335981291966") (message_id "1062") (message_id "1062") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981292166") (message_id "1066") (message_id "1066") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292366") (message_id "1069") (message_id "1069") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292566") (message_id "1072") (message_id "1072") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1335981292766") (message_id "1077") (message_id "1077") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Missing Ruler Action" type="Hint">
+    <Description>
+      Need to measure with ruler
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          In oder to correctly evaluate &lt;feature&gt;, it should be properly &lt;action&gt; first.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;definition&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the lesion that you want to measure. Try to find the best location to measure it.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is where &lt;feature&gt; was &lt;action&gt; by our expert pathologist.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335981291366") (source "ConsoleProtocolModule") (delay "1335981292032") (message_id "902") (message_id "902") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Maximum_Tumor_Thickness") (action "Add") (id "Concept2") (object_description "Finding.Maximum_Tumor_Thickness.Concept2") (entire_concept "Finding.Maximum_Tumor_Thickness.Concept2") (source "ReportInterface") (timestamp "1335981291566") (text "depth invasion") (length "17") (offset "107") (message_id "923") (message_id "923") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335981291766") (message_id "928") (message_id "928") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 4") (action "Request") (source "HelpManager") (timestamp "1335981291966") (message_id "931") (message_id "931") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 4") (action "Request") (source "HelpManager") (timestamp "1335981292166") (message_id "934") (message_id "934") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 4") (action "Request") (source "HelpManager") (timestamp "1335981292366") (message_id "937") (message_id "937") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 4") (action "Request") (source "HelpManager") (timestamp "1335981292566") (message_id "942") (message_id "942") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Similar Finding" type="Hint">
+    <Description>
+      similar finding has been mentioned already
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You already mentioned &lt;sibling&gt;, there is another type of &lt;feature&gt; that you should mention in your report.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          &lt;defined_feature&gt; needs to be added to your report
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982614083") (source "ConsoleProtocolModule") (delay "1335982614749") (message_id "1897") (message_id "1897") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Skin") (action "Add") (id "Concept1") (object_description "Finding.Skin.Concept1") (entire_concept "Finding.Skin.Concept1") (source "ConsoleProtocolModule") (timestamp "1335982614483") (delay "-3000") (text "skin") (length "4") (offset "107") (message_id "1909") (message_id "1909") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Foot_Location=Right_Foot") (action "Add") (id "Concept2") (object_description "Finding.Foot_Location=Right_Foot.Concept2") (entire_concept "Finding.Foot_Location=Right_Foot.Concept2") (source "ConsoleProtocolModule") (timestamp "1335982614883") (delay "-2600") (text "right foot") (length "4") (offset "119") (message_id "1912") (message_id "1912") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Excision") (action "Add") (id "Concept3") (object_description "Finding.Excision.Concept3") (entire_concept "Finding.Excision.Concept3") (source "ConsoleProtocolModule") (timestamp "1335982615283") (delay "-2200") (text "excision") (length "8") (offset "125") (message_id "1916") (message_id "1916") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS") (action "Add") (id "Concept4") (object_description "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (entire_concept "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (source "ConsoleProtocolModule") (timestamp "1335982615483") (delay "200") (text "insitu invasive melanoma") (length "28") (offset "134") (message_id "1920") (message_id "1920") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Ulceration") (action "Add") (id "Concept5") (object_description "Finding.Ulceration.Concept5") (entire_concept "Finding.Ulceration.Concept5") (source "ConsoleProtocolModule") (timestamp "1335982615883") (delay "-1600") (text "ulceration") (length "10") (offset "163") (message_id "1924") (message_id "1924") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept8") (object_description "Finding.Growth_Phase.Concept8") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616283") (delay "-1200") (text "no radial growth phase") (length "19") (offset "177") (message_id "1928") (message_id "1928") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Radial") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept9") (object_description "Finding.Growth_Phase.Concept8:Attribute.Radial.Concept9") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616483") (delay "200") (message_id "1930") (message_id "1930") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept10") (object_description "Finding.Growth_Phase.Concept8:Attribute.NO.Concept10") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616683") (delay "200") (message_id "1931") (message_id "1931") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335982616883") (message_id "1935") (message_id "1935") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 2") (action "Request") (source "HelpManager") (timestamp "1335982617083") (message_id "1937") (message_id "1937") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 2") (action "Request") (source "HelpManager") (timestamp "1335982617283") (message_id "1940") (message_id "1940") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Missing Value" type="Hint">
+    <Description>
+      Finding is mssing a numeric or some other calculable value
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;concept&gt; [&lt;a href="definition"&gt;1&lt;/a&gt;] in your report. However, to make it a meaningful prognostic factor, you need to report on its value.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          It looks like &lt;concept&gt; has already been &lt;action&gt; on the slide. You should be able to determine the value.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          The correct value is &lt;value&gt;, so you should put &lt;finding&gt; in your report.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335980996682") (source "ConsoleProtocolModule") (delay "1335980997348") (message_id "467") (message_id "467") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (10111, 9712) (10223, 12656)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335980996882") (delay "200") (x1 "10111") (y2 "12656") (x2 "10223") (message_id "824") (message_id "824") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Maximum_Tumor_Thickness") (action "Add") (id "Concept38") (object_description "Finding.Maximum_Tumor_Thickness.Concept38") (entire_concept "Finding.Maximum_Tumor_Thickness.Concept38") (source "ConsoleProtocolModule") (timestamp "1335980997082") (delay "200") (text "depth invasion") (length "17") (offset "107") (message_id "830") (message_id "830") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335980997282") (delay "200") (message_id "834") (message_id "834") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335980997482") (delay "200") (message_id "837") (message_id "837") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335980997682") (delay "200") (message_id "840") (message_id "840") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1335980997882") (delay "200") (message_id "843") (message_id "843") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1335980998082") (source "ConsoleProtocolModule") (delay "1198716") (message_id "1630") (message_id "1630") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="8" name="Missing Worksheet" type="Hint">
+    <Description>
+      This is hints for worksheet elements, s.a. TNM Staging
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Your report is missing Pathological Staging (pTNM)
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          All melanoma reports should contain Pathological Staging (pTNM). You can use &lt;b&gt;Tumor Staging Worksheet&lt;/b&gt; button to insert relevant  &lt;b&gt;pTNM&lt;/b&gt; stage into your report or type it in by hand.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Your report is missing &lt;template&gt; stage. What is it?
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Correct &lt;template&gt; stage is &lt;concept&gt;. Please type it into your report or select it in the &lt;b&gt;Tumor Staging Worksheet&lt;/b&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335982614083") (source "ConsoleProtocolModule") (delay "1335982614749") (message_id "1897") (message_id "1897") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Skin") (action "Add") (id "Concept1") (object_description "Finding.Skin.Concept1") (entire_concept "Finding.Skin.Concept1") (source "ConsoleProtocolModule") (timestamp "1335982614483") (delay "-3000") (text "skin") (length "4") (offset "107") (message_id "1909") (message_id "1909") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Foot_Location=Right_Foot") (action "Add") (id "Concept2") (object_description "Finding.Foot_Location=Right_Foot.Concept2") (entire_concept "Finding.Foot_Location=Right_Foot.Concept2") (source "ConsoleProtocolModule") (timestamp "1335982614883") (delay "-2600") (text "right foot") (length "4") (offset "119") (message_id "1912") (message_id "1912") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Excision") (action "Add") (id "Concept3") (object_description "Finding.Excision.Concept3") (entire_concept "Finding.Excision.Concept3") (source "ConsoleProtocolModule") (timestamp "1335982615283") (delay "-2200") (text "excision") (length "8") (offset "125") (message_id "1916") (message_id "1916") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS") (action "Add") (id "Concept4") (object_description "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (entire_concept "Diagnosis.IN-SITU_AND_INVASIVE_MALIGNANT_MELANOMA_NOS.Concept4") (source "ConsoleProtocolModule") (timestamp "1335982615483") (delay "200") (text "insitu invasive melanoma") (length "28") (offset "134") (message_id "1920") (message_id "1920") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Ulceration") (action "Add") (id "Concept5") (object_description "Finding.Ulceration.Concept5") (entire_concept "Finding.Ulceration.Concept5") (source "ConsoleProtocolModule") (timestamp "1335982615883") (delay "-1600") (text "ulceration") (length "10") (offset "163") (message_id "1924") (message_id "1924") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept8") (object_description "Finding.Growth_Phase.Concept8") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616283") (delay "-1200") (text "radial growth phase") (length "19") (offset "177") (message_id "1928") (message_id "1928") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Radial") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept9") (object_description "Finding.Growth_Phase.Concept8:Attribute.Radial.Concept9") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616483") (delay "200") (message_id "1930") (message_id "1930") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Growth_Phase.Concept8") (id "Concept10") (object_description "Finding.Growth_Phase.Concept8:Attribute.NO.Concept10") (entire_concept "Finding.Radial_Growth_Phase.Concept7") (source "ConsoleProtocolModule") (timestamp "1335982616683") (delay "200") (message_id "1931") (message_id "1931") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Growth_Phase") (action "Add") (id "Concept13") (object_description "Finding.Growth_Phase.Concept13") (entire_concept "Finding.Vertical_Growth_Phase.Concept12") (source "ConsoleProtocolModule") (timestamp "1335982617083") (delay "-400") (text "vertical growth phase") (length "21") (offset "197") (message_id "1945") (message_id "1945") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Vertical") (action "Add") (parent "Finding.Growth_Phase.Concept13") (id "Concept14") (object_description "Finding.Growth_Phase.Concept13:Attribute.Vertical.Concept14") (entire_concept "Finding.Vertical_Growth_Phase.Concept12") (source "ConsoleProtocolModule") (timestamp "1335982617283") (delay "200") (message_id "1948") (message_id "1948") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10473, 8765, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1335982617483") (delay "200") (x "10473") (y "8765") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "1843") (message_id "1843") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Anatomic_Level") (action "Add") (id "Concept16") (object_description "Finding.Anatomic_Level.Concept16") (entire_concept "Finding.Anatomic_Level_Four.Concept15") (source "ConsoleProtocolModule") (timestamp "1335982617683") (delay "200") (text "level IV") (length "8") (offset "227") (message_id "1954") (message_id "1954") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Four") (action "Add") (parent "Finding.Anatomic_Level.Concept16") (id "Concept17") (object_description "Finding.Anatomic_Level.Concept16:Attribute.Four.Concept17") (entire_concept "Finding.Anatomic_Level_Four.Concept15") (source "ConsoleProtocolModule") (timestamp "1335982617883") (delay "200") (message_id "1957") (message_id "1957") 
+      </Step>
+      <Step>
+        CE:  (type "Action") (label "Ruler: (10099, 9625) (10163, 12601)") (action "Measure") (source "ConsoleProtocolModule") (timestamp "1335982618083") (delay "200") (x1 "10099") (y2 "12601") (x2 "10163") (message_id "1964") (message_id "1964") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Maximum_Tumor_Thickness") (action "Add") (id "Concept20") (object_description "Finding.Maximum_Tumor_Thickness.Concept20") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618283") (delay "200") (text "depth invasion 1.3 mm") (length "27") (offset "236") (message_id "1971") (message_id "1971") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Mm") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept20") (id "Concept21") (object_description "Finding.Maximum_Tumor_Thickness.Concept20:Attribute.Mm.Concept21") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618483") (delay "200") (message_id "1974") (message_id "1974") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Number=1.3") (action "Add") (parent "Finding.Maximum_Tumor_Thickness.Concept20") (id "Concept22") (object_description "Finding.Maximum_Tumor_Thickness.Concept20:Attribute.Number=1.3.Concept22") (entire_concept "Finding.Maximum_Tumor_Thickness_Number_Mm=1.3.Concept19") (source "ConsoleProtocolModule") (timestamp "1335982618683") (delay "200") (message_id "1975") (message_id "1975") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mitotic_Index") (action "Add") (id "Concept23") (object_description "Finding.Mitotic_Index.Concept23") (entire_concept "Finding.Mitotic_Index.Concept23") (source "ConsoleProtocolModule") (timestamp "1335982618883") (delay "200") (text "mitotic index") (length "13") (offset "264") (message_id "1981") (message_id "1981") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mitotic_Index") (action "Delete") (id "Concept23") (object_description "Finding.Mitotic_Index.Concept23") (entire_concept "Finding.Mitotic_Index.Concept23") (source "ConsoleProtocolModule") (timestamp "1335982619083") (delay "200") (text "mitotic index") (length "13") (offset "264") (message_id "1986") (message_id "1986") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mitotic_Index") (action "Add") (id "Concept26") (object_description "Finding.Mitotic_Index.Concept26") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982619283") (delay "200") (text "mitotic index 7 per mm2") (length "26") (offset "264") (message_id "1990") (message_id "1990") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Number=7.0") (action "Add") (parent "Finding.Mitotic_Index.Concept26") (id "Concept27") (object_description "Finding.Mitotic_Index.Concept26:Attribute.Number=7.0.Concept27") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982619483") (delay "200") (message_id "1991") (message_id "1991") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Per_Mm2") (action "Add") (parent "Finding.Mitotic_Index.Concept26") (id "Concept28") (object_description "Finding.Mitotic_Index.Concept26:Attribute.Per_Mm2.Concept28") (entire_concept "Finding.Mitotic_Index_Number_Per_Mm2=7.0.Concept25") (source "ConsoleProtocolModule") (timestamp "1335982619683") (delay "200") (message_id "1992") (message_id "1992") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor-infiltrating_Lymphocytes") (action "Add") (id "Concept32") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept32") (entire_concept "Finding.Brisk_Tumor-infiltrating_Lymphocytes.Concept31") (source "ConsoleProtocolModule") (timestamp "1335982619883") (delay "200") (text "brisk tumor infiltrating lymphocytes") (length "36") (offset "291") (message_id "2002") (message_id "2002") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Brisk") (action "Add") (parent "Finding.Tumor-infiltrating_Lymphocytes.Concept32") (id "Concept33") (object_description "Finding.Tumor-infiltrating_Lymphocytes.Concept32:Attribute.Brisk.Concept33") (entire_concept "Finding.Brisk_Tumor-infiltrating_Lymphocytes.Concept31") (source "ConsoleProtocolModule") (timestamp "1335982620083") (delay "200") (message_id "2003") (message_id "2003") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymph-vascular_Invasion") (action "Add") (id "Concept35") (object_description "Finding.Lymph-vascular_Invasion.Concept35") (entire_concept "Finding.Lymph-vascular_Invasion.Concept35") (source "ConsoleProtocolModule") (timestamp "1335982620283") (delay "200") (text "lymp vascular invasion") (length "22") (offset "331") (message_id "2010") (message_id "2010") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Lymph-vascular_Invasion.Concept35") (id "Concept36") (object_description "Finding.Lymph-vascular_Invasion.Concept35:Attribute.NO.Concept36") (entire_concept "Finding.Lymph-vascular_Invasion.Concept35") (source "ConsoleProtocolModule") (timestamp "1335982620483") (delay "200") (message_id "2011") (message_id "2011") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Tumor_Regression") (action "Add") (id "Concept38") (object_description "Finding.Tumor_Regression.Concept38") (entire_concept "Finding.Tumor_Regression.Concept38") (source "ConsoleProtocolModule") (timestamp "1335982620683") (delay "200") (text "tumor regression") (length "16") (offset "357") (message_id "2018") (message_id "2018") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Tumor_Regression.Concept38") (id "Concept39") (object_description "Finding.Tumor_Regression.Concept38:Attribute.NO.Concept39") (entire_concept "Finding.Tumor_Regression.Concept38") (source "ConsoleProtocolModule") (timestamp "1335982620883") (delay "200") (message_id "2019") (message_id "2019") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Perineural_Invasion") (action "Add") (id "Concept41") (object_description "Finding.Perineural_Invasion.Concept41") (entire_concept "Finding.Perineural_Invasion.Concept41") (source "ConsoleProtocolModule") (timestamp "1335982621083") (delay "200") (text "perineural invasion") (length "19") (offset "377") (message_id "2026") (message_id "2026") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Perineural_Invasion.Concept41") (id "Concept42") (object_description "Finding.Perineural_Invasion.Concept41:Attribute.NO.Concept42") (entire_concept "Finding.Perineural_Invasion.Concept41") (source "ConsoleProtocolModule") (timestamp "1335982621283") (delay "200") (message_id "2027") (message_id "2027") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Microsatellitosis") (action "Add") (id "Concept44") (object_description "Finding.Microsatellitosis.Concept44") (entire_concept "Finding.Microsatellitosis.Concept44") (source "ConsoleProtocolModule") (timestamp "1335982621483") (delay "200") (text "microsatellitosis") (length "17") (offset "400") (message_id "2034") (message_id "2034") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "NO") (action "Add") (parent "Finding.Microsatellitosis.Concept44") (id "Concept45") (object_description "Finding.Microsatellitosis.Concept44:Attribute.NO.Concept45") (entire_concept "Finding.Microsatellitosis.Concept44") (source "ConsoleProtocolModule") (timestamp "1335982621683") (delay "200") (message_id "2035") (message_id "2035") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Margins") (action "Add") (id "Concept48") (object_description "Finding.Margins.Concept48") (entire_concept "Finding.Margins_Involved.Concept47") (source "ConsoleProtocolModule") (timestamp "1335982621883") (delay "200") (text "margins involved") (length "16") (offset "422") (message_id "2050") (message_id "2050") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Involved") (action "Add") (parent "Finding.Margins.Concept48") (id "Concept49") (object_description "Finding.Margins.Concept48:Attribute.Involved.Concept49") (entire_concept "Finding.Margins_Involved.Concept47") (source "ConsoleProtocolModule") (timestamp "1335982622083") (delay "200") (message_id "2053") (message_id "2053") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335982622283") (message_id "2057") (message_id "2057") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1335982622483") (message_id "2060") (message_id "2060") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1335982622683") (message_id "2063") (message_id "2063") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1335982622883") (message_id "2066") (message_id "2066") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Nothing is Done Yet" type="Hint">
+    <Description>
+      Nothing has been done yet
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You should explore the slide, come up with the diagnosis, and identify all relevant prognostic factors that you think are relevant to the final diagnosis. Type your report into the provided text area.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/Melanocytic/AP_120.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/Melanocytic.owl") (timestamp "1335979423895") (message_id "404") (message_id "404") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1335979424095") (message_id "410") (message_id "410") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "HelpManager") (timestamp "1335979424295") (message_id "413") (message_id "413") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="No Such Concept in Domain" type="">
+    <Description>
+      This normally doesn't happen, but this state is generated when a user concept doesn't exist in the domain
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; does not exist in the domain
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Removed Correct Concept" type="">
+    <Description>
+      This is a state that has no messages and corresponds to removing a correct concept.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+</ScenarioSet>

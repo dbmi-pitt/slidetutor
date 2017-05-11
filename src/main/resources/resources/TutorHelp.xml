@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ScenarioSet>
+  <ScenarioEntry code="11" name="Absent Finding Not in Case" type="AbsentFinding">
+    <Description>
+      User asserts an absent finding that has not been mentioned as explicitly absent in the case
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The absence of &lt;concept&gt; is not important for solving this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The absence of &lt;concept&gt; is not important for solving this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332361176911") (message_id "0") (source "ConsoleProtocolModule") (delay "1332361177577") (message_id "0") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Ballooning") (action "Add") (id "Concept2") (object_description "AbsentFinding.Ballooning.Concept2") (entire_concept "AbsentFinding.Ballooning.Concept2") (source "ConsoleProtocolModule") (timestamp "1332360382343") (delay "-794568") (power "medium") (view "x=5546, y=3111, width=2204, height=1692") (message_id "29") (message_id "29") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="17" name="Absent Finding Observed at Low Power" type="AbsentFinding">
+    <Description>
+      You have stated an absence of finding at power that is generally considered to low to really observe it.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is not in this case, but absence of &lt;concept&gt; is generally determined at a higher power.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is not in this case, but absence of &lt;concept&gt; is generally determined at a higher power.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332361176911") (message_id "0") (source "ConsoleProtocolModule") (delay "1332361177577") (message_id "0") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept4") (object_description "AbsentFinding.Mucin.Concept4") (entire_concept "AbsentFinding.Mucin.Concept4") (source "ConsoleProtocolModule") (timestamp "1332360515359") (delay "-661552") (power "low") (view "x=-261, y=0, width=16395, height=12587") (message_id "84") (message_id "84") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "200") (source "ConsoleProtocolModule") (delay "-1332360515159") (message_id "607") (message_id "607") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="12" name="Absent Finding Should be Present" type="AbsentFinding">
+    <Description>
+      A user asserts an absence of a finding, that is in fact authored as present in the case.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Actually, &lt;concept&gt; is an important feature that is present in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Actually, &lt;concept&gt; is an important feature that is present in this case.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You can generally observe &lt;concept&gt; here.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an example of  &lt;concept&gt;.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete the absence of &lt;concept&gt;, and identifiy that it is in fact present.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332361176911") (message_id "0") (source "ConsoleProtocolModule") (delay "1332361177577") (message_id "0") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Nuclear_Dust") (action "Add") (id "Concept7") (object_description "AbsentFinding.Nuclear_Dust.Concept7") (entire_concept "AbsentFinding.Nuclear_Dust.Concept7") (source "ConsoleProtocolModule") (timestamp "1332360777135") (delay "-399776") (power "low") (view "x=-261, y=0, width=16395, height=12587") (message_id "128") (message_id "128") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "400") (source "ConsoleProtocolModule") (delay "-1332360776735") (message_id "621") (message_id "621") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="417" name="Absent Finding is Not Important" type="AbsentFinding">
+    <Description>
+      This finding was authored as explicitly absent in the case, however it is not an important factor in coming up with a diagnosis
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is not present in this case. However, in the context of this domain and case, the absence of this finding is not significant in deducing the correct diagnosis.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is not present in this case. However, in the context of this domain and case, the absence of this finding is not significant in deducing the correct diagnosis.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/PerivascularDermatitis/AP_602.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/PerivascularDermatitis.owl") (timestamp "1334168636099") (message_id "682") (message_id "682") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(3107, 3624, 0.13)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334168636299") (x "3107") (y "3624") (width "4384") (height "3384") (scale "0.13") (auto "false") (message_id "747") (message_id "747") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Necrosis") (action "Add") (id "Concept3") (object_description "AbsentFinding.Necrosis.Concept3") (entire_concept "AbsentFinding.Necrosis.Concept3") (source "ArcNodeInterface") (timestamp "1334168636499") (power "medium") (view "x=3107, y=3624, width=4384, height=3384") (message_id "757") (message_id "757") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1334168636699") (message_id "763") (message_id "763") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="14" name="Incorrect Absent Finding Location" type="AbsentFinding">
+    <Description>
+      While the finding is indeed absent. Its absence needs to be observed at a different location on the slide
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are right that &lt;concept&gt; is absent, but you can generally evaluate the absence of &lt;concept&gt; in another location.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are right that &lt;concept&gt; is absent, but you can generally evaluate the absence of &lt;concept&gt; in another location.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the general area where you can see &lt;concept&gt;
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the area where you would generally observe &lt;concept&gt;.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          As you can see, &lt;concept&gt; is not there, and its absence is significant in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332361943177") (message_id "8") (source "ConsoleProtocolModule") (delay "1332361943843") (message_id "8") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(10700, 7093, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332361663882") (delay "-279295") (x "10700") (y "7093") (width "2216") (height "1692") (scale "0.25") (auto "false") (message_id "30") (message_id "30") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept2") (object_description "AbsentFinding.Mucin.Concept2") (entire_concept "AbsentFinding.Mucin.Concept2") (source "ConsoleProtocolModule") (timestamp "1332361664082") (delay "200") (power "medium") (view "x=10700, y=7093, width=2216, height=1692") (message_id "40") (message_id "40") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "600") (source "ConsoleProtocolModule") (delay "-1332361663482") (message_id "635") (message_id "635") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="24" name="Attribute Not Valid" type="Attribute">
+    <Description>
+      A given attribute is not used to describe a given finding according the domain ontology. 
+Ex: moderate blister
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain, &lt;concept&gt; is not a valid qualifier of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5559, 3085, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332362623552") (delay "-1111786") (x "5559") (y "3085") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "26") (message_id "26") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept1") (object_description "Finding.Blister.Concept1") (entire_concept "Finding.Blister.Concept1") (source "ConsoleProtocolModule") (timestamp "1332362623752") (delay "200") (location "x=6607, y=3809, width=10, height=10") (power "medium") (message_id "32") (message_id "32") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Moderate") (action "Add") (parent "Finding.Blister.Concept1") (id "Concept4") (object_description "Finding.Blister.Concept1:Attribute.Moderate.Concept4") (entire_concept "Finding.Blister, Moderate.Concept3") (source "ConsoleProtocolModule") (timestamp "1332362623952") (delay "200") (message_id "39") (message_id "39") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "800") (source "ConsoleProtocolModule") (delay "-1332362623152") (message_id "650") (message_id "650") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="25" name="Attribute Set Not Valid" type="Attribute">
+    <Description>
+      In the context of domain ontology a given set of attributes cannot simultaneously describe a given finding. Those attributes may be valid if put in as a separate finding 
+Ex: [subepidermal blister, intraepidermal] VS [subepidremal blister] and [inraepidermal blister] concept
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this domain, &lt;concept&gt; in conjunction with &lt;finding&gt; is not a valid finding that is understood by the system. However it may be a valid evidence if it is asserted along with another instance of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You may also try to assert another instance of &lt;feature&gt; qualified with &lt;concept&gt; attribute.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5559, 3081, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332362849658") (delay "-885680") (x "5559") (y "3081") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "55") (message_id "55") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept5") (object_description "Finding.Blister.Concept5") (entire_concept "Finding.Blister.Concept5") (source "ConsoleProtocolModule") (timestamp "1332362849858") (delay "200") (location "x=6615, y=3845, width=10, height=10") (power "medium") (message_id "60") (message_id "60") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept5") (id "Concept6") (object_description "Finding.Blister.Concept5:Attribute.Subepidermal.Concept6") (entire_concept "Finding.Subepidermal_Blister, Intraepidermal.Concept7") (source "ConsoleProtocolModule") (timestamp "1332362850258") (delay "400") (message_id "72") (message_id "72") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Intraepidermal") (action "Add") (parent "Finding.Blister.Concept5") (id "Concept8") (object_description "Finding.Blister.Concept5:Attribute.Intraepidermal.Concept8") (entire_concept "Finding.Subepidermal_Blister, Intraepidermal.Concept7") (source "ConsoleProtocolModule") (timestamp "1332362850058") (delay "-200") (message_id "71") (message_id "71") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1000") (source "ConsoleProtocolModule") (delay "-1332362849058") (message_id "669") (message_id "669") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="16" name="Attribute Value is Incorrect" type="Attribute">
+    <Description>
+      This scenario occurse when a selected attribute has a category s.a. QUANTITY and you pick a wrong value.
+Ex: user picks incorrect QUANTITY.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to evaluate &lt;attribute&gt; of &lt;feature&gt;, however &lt;concept&gt; is not the best way to describe &lt;attribute&gt; in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;, and assert correct &lt;attribute&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6391, 4249, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332363214521") (delay "-520817") (x "6391") (y "4249") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "97") (message_id "97") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept10") (object_description "Finding.Neutrophils.Concept10") (entire_concept "Finding.Neutrophils.Concept10") (source "ConsoleProtocolModule") (timestamp "1332363214721") (delay "200") (location "x=7547, y=5161, width=10, height=10") (power "medium") (message_id "104") (message_id "104") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept10") (id "Concept12") (object_description "Finding.Neutrophils.Concept10:Attribute.Inflammatory_Infiltrate.Concept12") (entire_concept "Finding.Marked_Neutrophilic_Inflammatory_Infiltrate.Concept14") (source "ConsoleProtocolModule") (timestamp "1332363214921") (delay "200") (message_id "113") (message_id "113") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Marked") (action "Add") (parent "Finding.Neutrophils.Concept10") (id "Concept13") (object_description "Finding.Neutrophils.Concept10:Attribute.Marked.Concept13") (entire_concept "Finding.Marked_Neutrophilic_Inflammatory_Infiltrate.Concept14") (source "ConsoleProtocolModule") (timestamp "1332363215121") (delay "200") (message_id "114") (message_id "114") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1200") (source "ConsoleProtocolModule") (delay "-1332363213921") (message_id "691") (message_id "691") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="11" name="Attribute is Incorrect" type="Attribute">
+    <Description>
+      In the context of this case, a given an attribute is not the best way to describe a finding.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          In the context of this case, &lt;concept&gt; is not the best way to describe &lt;feature&gt;
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5251, 3097, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332363342697") (delay "-392641") (x "5251") (y "3097") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "164") (message_id "164") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept19") (object_description "Finding.Blister.Concept19") (entire_concept "Finding.Blister.Concept19") (source "ConsoleProtocolModule") (timestamp "1332363342897") (delay "200") (location "x=6563, y=3861, width=10, height=10") (power "medium") (message_id "170") (message_id "170") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Intraepidermal") (action "Add") (parent "Finding.Blister.Concept19") (id "Concept20") (object_description "Finding.Blister.Concept19:Attribute.Intraepidermal.Concept20") (entire_concept "Finding.Intraepidermal_Blister.Concept21") (source "ConsoleProtocolModule") (timestamp "1332363343097") (delay "200") (message_id "177") (message_id "177") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1400") (source "ConsoleProtocolModule") (delay "-1332363341697") (message_id "713") (message_id "713") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="13" name="Attribute is Not Important" type="Attribute">
+    <Description>
+      The user was more specific then is required by case and described a finding even further.
+Ex: subepidermal blister is required by case, but user puts in
+subepidermal blister extend beyound ...
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          While &lt;concept&gt; might be an important quality of &lt;feature&gt; in a different context, it is unnecessary in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5195, 3077, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332363446513") (delay "-288825") (x "5195") (y "3077") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "193") (message_id "193") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept22") (object_description "Finding.Blister.Concept22") (entire_concept "Finding.Blister.Concept22") (source "ConsoleProtocolModule") (timestamp "1332363446713") (delay "200") (location "x=6531, y=3801, width=10, height=10") (power "medium") (message_id "199") (message_id "199") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept22") (id "Concept24") (object_description "Finding.Blister.Concept22:Attribute.Subepidermal.Concept24") (entire_concept "Finding.Subepidermal_Blister_Extending_along_Infundibular_Structure.Concept25") (source "ConsoleProtocolModule") (timestamp "1332363447113") (delay "400") (message_id "208") (message_id "208") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Extending_along_Infundibular_Structure") (action "Add") (parent "Finding.Blister.Concept22") (id "Concept23") (object_description "Finding.Blister.Concept22:Attribute.Extending_along_Infundibular_Structure.Concept23") (entire_concept "Finding.Subepidermal_Blister_Extending_along_Infundibular_Structure.Concept25") (source "ConsoleProtocolModule") (timestamp "1332363446913") (delay "-200") (message_id "207") (message_id "207") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1600") (source "ConsoleProtocolModule") (delay "-1332363445313") (message_id "732") (message_id "732") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="26" name="Incorrect Attribute Location" type="Attribute">
+    <Description>
+      This scenario occures when a feature's location that was initially identified correctly is no longer valid once it was described further.
+Ex: isolated neutrophils and neutrophilic infiltrate share the same feature and location maybe valid, however once one of them is refined, the resulting finding may reside in incorrect location.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          While &lt;feature&gt; can be found in this location, &lt;finding&gt; cannot be observed here.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt; quality from the description of &lt;feature&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363735338") (message_id "12") (source "ConsoleProtocolModule") (delay "1332363736004") (message_id "12") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5503, 3129, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332363630192") (delay "-105146") (x "5503") (y "3129") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "230") (message_id "230") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept27") (object_description "Finding.Neutrophils.Concept27") (entire_concept "Finding.Neutrophils.Concept27") (source "ConsoleProtocolModule") (timestamp "1332363630392") (delay "200") (location "x=6571, y=3769, width=10, height=10") (power "medium") (message_id "239") (message_id "239") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept27") (id "Concept29") (object_description "Finding.Neutrophils.Concept27:Attribute.Inflammatory_Infiltrate.Concept29") (entire_concept "Finding.Neutrophilic_Inflammatory_Infiltrate.Concept30") (source "ConsoleProtocolModule") (timestamp "1332363630592") (delay "200") (message_id "246") (message_id "246") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1800") (source "ConsoleProtocolModule") (delay "-1332363628792") (message_id "754") (message_id "754") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="20" name="Diagnosis Became Inconsistent" type="Diagnosis">
+    <Description>
+      User identifies a piece of evidence that does not support a diagnosis asserted earlier.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis of &lt;concept&gt; is not supported by all of the evidence identified in this case now.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There are some identified findings that do not support &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          The following findings generally do not support &lt;concept&gt;. Findings: &lt;findings&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete the diagnosis of &lt;concept&gt; because not all of the identified findings support it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332447819173") (source "ConsoleProtocolModule") (delay "1332447819839") (message_id "133") (message_id "133") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6242, 3581, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332447744364") (delay "-74809") (x "6242") (y "3581") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "205") (message_id "205") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept6") (object_description "Finding.Blister.Concept6") (entire_concept "Finding.Blister.Concept6") (source "ConsoleProtocolModule") (timestamp "1332447744564") (delay "200") (location "x=6648, y=3823, width=10, height=10") (power "high") (message_id "211") (message_id "211") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept7") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept7") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept7") (source "ConsoleProtocolModule") (timestamp "1332447744764") (delay "200") (message_id "218") (message_id "218") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept8") (object_description "Diagnosis.ARTHROPOD_ASSAULT.Concept8") (entire_concept "Diagnosis.ARTHROPOD_ASSAULT.Concept8") (source "ConsoleProtocolModule") (timestamp "1332447744964") (delay "200") (message_id "222") (message_id "222") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6292, 3625, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332447745164") (delay "200") (x "6292") (y "3625") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "226") (message_id "226") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept9") (object_description "Finding.Nuclear_Dust.Concept9") (entire_concept "Finding.Nuclear_Dust.Concept9") (source "ConsoleProtocolModule") (timestamp "1332447745364") (delay "200") (location "x=7144, y=4119, width=10, height=10") (power "high") (message_id "233") (message_id "233") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "2000") (source "ConsoleProtocolModule") (delay "-1332447743364") (message_id "773") (message_id "773") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="13" name="Diagnosis Doesn't Have Enough Evidence" type="Diagnosis">
+    <Description>
+      If reasoner's diagnostic mode is set to 'absolute', then you can't truely call a diagnosis until you have sufficient evidence to back it.
+
+##SimpleDiagnosticReasoner.diagnoses.inference.mode=absolute##
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You do not yet have sufficient evidence to diagnose this case as &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Either delete &lt;concept&gt; or identify additional evidence that supports &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          The diagnosis, &lt;concept&gt;, is generally supported by &lt;findings&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1334169019190") (source "ConsoleProtocolModule") (delay "1334169019856") (message_id "1106") (message_id "1106") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17212, 3540, 0.5)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334169019390") (x "17212") (y "3540") (width "1096") (height "846") (scale "0.5") (auto "false") (message_id "1122") (message_id "1122") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept1") (object_description "Finding.Blister.Concept1") (entire_concept "Finding.Blister.Concept1") (source "ArcNodeInterface") (timestamp "1334169019590") (location "x=17870, y=3756, width=10, height=10") (power "high") (message_id "1128") (message_id "1128") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept3") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept3") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept3") (source "ArcNodeInterface") (timestamp "1334169019790") (message_id "1138") (message_id "1138") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept4") (object_description "Diagnosis.BLISTER_ABOVE_SCAR.Concept4") (entire_concept "Diagnosis.BLISTER_ABOVE_SCAR.Concept4") (source "ArcNodeInterface") (timestamp "1334169019990") (message_id "1141") (message_id "1141") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="11" name="Diagnosis Doesn't Match All Findings" type="Diagnosis">
+    <Description>
+      One or more of the identifed findings does not fit the proposed diagnosis.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The proposed diagnosis, &lt;concept&gt;, does not match all of the identified findings in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There are some identified findings that do not support &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          The following findings generally do not support &lt;concept&gt;. Findings: &lt;findings&gt;
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete the diagnosis of &lt;concept&gt; because not all of the identified findings support it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332447819173") (source "ConsoleProtocolModule") (delay "1332447819839") (message_id "133") (message_id "133") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6186, 3366, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332447819373") (delay "200") (x "6186") (y "3366") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "280") (message_id "280") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept1") (object_description "Finding.Blister.Concept1") (entire_concept "Finding.Blister.Concept1") (source "ConsoleProtocolModule") (timestamp "1332447819573") (delay "200") (location "x=6650, y=3668, width=10, height=10") (power "high") (message_id "286") (message_id "286") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept3") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept3") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept3") (source "ConsoleProtocolModule") (timestamp "1332447819773") (delay "200") (message_id "295") (message_id "295") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6426, 3632, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332447819973") (delay "200") (x "6426") (y "3632") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "290") (message_id "290") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept4") (object_description "Finding.Nuclear_Dust.Concept4") (entire_concept "Finding.Nuclear_Dust.Concept4") (source "ConsoleProtocolModule") (timestamp "1332447820173") (delay "200") (location "x=7206, y=4122, width=10, height=10") (power "high") (message_id "304") (message_id "304") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept5") (object_description "Diagnosis.ARTHROPOD_ASSAULT.Concept5") (entire_concept "Diagnosis.ARTHROPOD_ASSAULT.Concept5") (source "ConsoleProtocolModule") (timestamp "1332447820373") (delay "200") (message_id "308") (message_id "308") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1332447820573") (source "ConsoleProtocolModule") (delay "200") (message_id "802") (message_id "802") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="500" name="Diagnosis is Correct" type="Diagnosis">
+    <Description>
+      This is a marker state and doesn't have any messages. It identifies correct Dx for the case to set it apart from the correct Dx at a given time given a set of evidence
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="12" name="Diagnosis is Correct But Not Supported" type="Diagnosis">
+    <Description>
+      User enters correct diagnosis for this case, but it does not seem to be supported by the evidence
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Although &lt;concept&gt; is a correct diagnosis for this case, it doesn't seem to be supported by all of the identified findings.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Although &lt;concept&gt; is a correct diagnosis for this case, it doesn't seem to be supported by all of the identified findings.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6426, 3632, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396550") (delay "200") (x "6426") (y "3632") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "290") (message_id "290") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept6") (object_description "Finding.Blister.Concept6") (entire_concept "Finding.Blister.Concept6") (source "ConsoleProtocolModule") (timestamp "1332508396750") (delay "200") (location "x=6618, y=3700, width=10, height=10") (power "high") (message_id "339") (message_id "339") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6398, 3652, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396950") (delay "200") (x "6398") (y "3652") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "343") (message_id "343") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept7") (object_description "Finding.Fibrosis.Concept7") (entire_concept "Finding.Fibrosis.Concept7") (source "ConsoleProtocolModule") (timestamp "1332508397150") (delay "200") (location "x=7080, y=4046, width=10, height=10") (power "high") (message_id "349") (message_id "349") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "DERMATITIS_HERPETIFORMIS") (action "Add") (id "Concept8") (object_description "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept8") (entire_concept "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept8") (source "ConsoleProtocolModule") (timestamp "1332508397350") (delay "200") (message_id "356") (message_id "356") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "DERMATITIS_HERPETIFORMIS") (action "Add") (id "Concept9") (object_description "Diagnosis.DERMATITIS_HERPETIFORMIS.Concept9") (entire_concept "Diagnosis.DERMATITIS_HERPETIFORMIS.Concept9") (source "ConsoleProtocolModule") (timestamp "1332508397550") (delay "200") (message_id "360") (message_id "360") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1332508397750") (source "ConsoleProtocolModule") (delay "200") (message_id "851") (message_id "851") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="600" name="Diagnosis is Supported But Not Goal" type="Diagnosis">
+    <Description>
+      Diagnosis is supported by evidence, yet it is not a correct diagnosis in this case (not a goal). This state does not have any messages associated with it
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="118" name="Diagnosis is Too General" type="Diagnosis">
+    <Description>
+      Diagnosis is to general to be useful.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis  &lt;concept&gt; is too general to be useful.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove &lt;concept&gt;
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6398, 3652, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332448115293") (delay "-60281057") (x "6398") (y "3652") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "343") (message_id "343") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept14") (object_description "Finding.Blister.Concept14") (entire_concept "Finding.Blister.Concept14") (source "ConsoleProtocolModule") (timestamp "1332448115493") (delay "200") (location "x=6762, y=3904, width=10, height=10") (power "high") (message_id "434") (message_id "434") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "VESICULAR_DERMATITIS") (action "Add") (id "Concept15") (object_description "Hypothesis.VESICULAR_DERMATITIS.Concept15") (entire_concept "Hypothesis.VESICULAR_DERMATITIS.Concept15") (source "ConsoleProtocolModule") (timestamp "1332448115693") (delay "200") (message_id "441") (message_id "441") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "VESICULAR_DERMATITIS") (action "Add") (id "Concept16") (object_description "Diagnosis.VESICULAR_DERMATITIS.Concept16") (entire_concept "Diagnosis.VESICULAR_DERMATITIS.Concept16") (source "ConsoleProtocolModule") (timestamp "1332448115893") (delay "200") (message_id "445") (message_id "445") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "2600") (source "ConsoleProtocolModule") (delay "-1332448113293") (message_id "897") (message_id "897") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="117" name="Diagnosis is Too Specific" type="Diagnosis">
+    <Description>
+      You have a diagnosis which is more specific then what case describes
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis &lt;concept&gt; is correct, however it is more specific than the evidence suggests in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The diagnosis &lt;concept&gt; is correct, however it is more specific than the evidence suggests in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/NodularDiffuseDermatitis/HA_1240.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/NodularDiffuseDermatitis.owl") (timestamp "1334170220034") (message_id "1146") (message_id "1146") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(2218, 1992, 0.13)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334170220234") (x "2218") (y "1992") (width "4384") (height "3384") (scale "0.13") (auto "false") (message_id "1229") (message_id "1229") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Histiocytes") (action "Add") (id "Concept5") (object_description "Finding.Histiocytes.Concept5") (entire_concept "Finding.Histiocytes.Concept5") (source "ArcNodeInterface") (timestamp "1334170220434") (location "x=4618, y=3568, width=10, height=10") (power "medium") (message_id "1238") (message_id "1238") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "KERION") (action "Add") (id "Concept6") (object_description "Hypothesis.KERION.Concept6") (entire_concept "Hypothesis.KERION.Concept6") (source "ArcNodeInterface") (timestamp "1334170220634") (message_id "1250") (message_id "1250") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "KERION") (action "Add") (id "Concept7") (object_description "Diagnosis.KERION.Concept7") (entire_concept "Diagnosis.KERION.Concept7") (source "ArcNodeInterface") (timestamp "1334170220834") (message_id "1254") (message_id "1254") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1334170221034") (message_id "1260") (message_id "1260") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="Diagnosis while No Findings" type="Diagnosis">
+    <Description>
+      Diagnosis is asserted while no findings are given
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You have not provided any evidence yet. It is too early to specify a diagnosis.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You should either add evidence that supports &lt;concept&gt;, or remove it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept19") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept19") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept19") (source "ConsoleProtocolModule") (timestamp "1332448173613") (delay "-60222737") (message_id "491") (message_id "491") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept20") (object_description "Diagnosis.ARTHROPOD_ASSAULT.Concept20") (entire_concept "Diagnosis.ARTHROPOD_ASSAULT.Concept20") (source "ConsoleProtocolModule") (timestamp "1332448173813") (delay "200") (message_id "495") (message_id "495") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "2800") (source "ConsoleProtocolModule") (delay "-1332448171013") (message_id "919") (message_id "919") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="15" name="Case Has More Diagnoses to Consider" type="Done">
+    <Description>
+      This case has several differential diagnoses and you didn't list all of them
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          There are more diagnoses to consider before you can sign out this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; has all of the expected features: &lt;findings&gt;. This would be one reasonable diagnosis in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332945201314") (message_id "944") (source "ConsoleProtocolModule") (delay "1332945201980") (message_id "944") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11402, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945007994") (delay "-193320") (x "9191") (y "11402") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1031") (message_id "1031") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept10") (object_description "Finding.Blister.Concept10") (entire_concept "Finding.Blister.Concept10") (source "ConsoleProtocolModule") (timestamp "1332945006394") (delay "-1600") (location "x=10955, y=12130, width=10, height=10") (power "medium") (message_id "1037") (message_id "1037") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept10") (id "Concept11") (object_description "Finding.Blister.Concept10:Attribute.Subepidermal.Concept11") (entire_concept "Finding.Subepidermal_Blister.Concept12") (source "ConsoleProtocolModule") (timestamp "1332945006594") (delay "200") (message_id "1044") (message_id "1044") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11402, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945007994") (delay "1400") (x "9191") (y "11402") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1031") (message_id "1031") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept13") (object_description "Finding.Neutrophils.Concept13") (entire_concept "Finding.Neutrophils.Concept13") (source "ConsoleProtocolModule") (timestamp "1332945006994") (delay "-1000") (location "x=9911, y=12010, width=10, height=10") (power "medium") (message_id "1054") (message_id "1054") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11402, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945007994") (delay "1000") (x "9191") (y "11402") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1031") (message_id "1031") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept14") (object_description "Finding.Nuclear_Dust.Concept14") (entire_concept "Finding.Nuclear_Dust.Concept14") (source "ConsoleProtocolModule") (timestamp "1332945007394") (delay "-600") (location "x=9911, y=12010, width=10, height=10") (power "medium") (message_id "1059") (message_id "1059") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept13") (id "Concept15") (object_description "Finding.Neutrophils.Concept13:Attribute.Inflammatory_Infiltrate.Concept15") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept17") (source "ConsoleProtocolModule") (timestamp "1332945007594") (delay "200") (message_id "1068") (message_id "1068") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Moderate") (action "Add") (parent "Finding.Neutrophils.Concept13") (id "Concept16") (object_description "Finding.Neutrophils.Concept13:Attribute.Moderate.Concept16") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept17") (source "ConsoleProtocolModule") (timestamp "1332945007794") (delay "200") (message_id "1069") (message_id "1069") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11402, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945007994") (delay "200") (x "9191") (y "11402") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1031") (message_id "1031") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept18") (object_description "AbsentFinding.Mucin.Concept18") (entire_concept "AbsentFinding.Mucin.Concept18") (source "ConsoleProtocolModule") (timestamp "1332945008194") (delay "200") (power "medium") (view "x=9191, y=11402, width=2204, height=1692") (message_id "1080") (message_id "1080") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Reticular_Dermis") (action "Add") (parent "AbsentFinding.Mucin.Concept18") (id "Concept20") (object_description "AbsentFinding.Mucin.Concept18:Attribute.Reticular_Dermis.Concept20") (entire_concept "AbsentFinding.Mucin_in_Reticular_Dermis.Concept21") (source "ConsoleProtocolModule") (timestamp "1332945008394") (delay "200") (message_id "1088") (message_id "1088") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "DERMATITIS_HERPETIFORMIS") (action "Add") (id "Concept22") (object_description "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept22") (entire_concept "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept22") (source "ConsoleProtocolModule") (timestamp "1332945008594") (delay "200") (message_id "1095") (message_id "1095") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "DERMATITIS_HERPETIFORMIS") (action "Add") (id "Concept23") (object_description "Diagnosis.DERMATITIS_HERPETIFORMIS.Concept23") (entire_concept "Diagnosis.DERMATITIS_HERPETIFORMIS.Concept23") (source "ConsoleProtocolModule") (timestamp "1332945008794") (delay "200") (message_id "1099") (message_id "1099") 
+      </Step>
+      <Step>
+        CE:  (type "Done") (label "ArcNodeInterface") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332945008994") (delay "200") (message_id "1104") (message_id "1104") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "3000") (source "ConsoleProtocolModule") (delay "-1332945005994") (message_id "936") (message_id "936") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="14" name="Case Has More Findings to Consider" type="Done">
+    <Description>
+      There is still some evidence that should be identified
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          There is still some additional evidence in this case that should be identified before you can sign out this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332877688317") (message_id "1076") (source "ConsoleProtocolModule") (delay "1332877688983") (message_id "1076") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17738, 3396, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877688517") (delay "200") (x "17738") (y "3396") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "1315") (message_id "1315") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept36") (object_description "Finding.Blister.Concept36") (entire_concept "Finding.Blister.Concept36") (source "ConsoleProtocolModule") (timestamp "1332877688717") (delay "200") (location "x=17898, y=3754, width=10, height=10") (power "high") (message_id "1433") (message_id "1433") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept36") (id "Concept37") (object_description "Finding.Blister.Concept36:Attribute.Subepidermal.Concept37") (entire_concept "Finding.Subepidermal_Blister.Concept38") (source "ConsoleProtocolModule") (timestamp "1332877688917") (delay "200") (message_id "1442") (message_id "1442") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept39") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept39") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept39") (source "ConsoleProtocolModule") (timestamp "1332877689117") (delay "200") (message_id "1449") (message_id "1449") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept40") (object_description "Diagnosis.BLISTER_ABOVE_SCAR.Concept40") (entire_concept "Diagnosis.BLISTER_ABOVE_SCAR.Concept40") (source "ConsoleProtocolModule") (timestamp "1332877689317") (delay "200") (message_id "1453") (message_id "1453") 
+      </Step>
+      <Step>
+        CE:  (type "Done") (label "ArcNodeInterface") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877689517") (delay "200") (message_id "1458") (message_id "1458") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "3200") (source "ConsoleProtocolModule") (delay "-1332877686317") (message_id "990") (message_id "990") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="16" name="Case Needs Diagnosis to Finish" type="Done">
+    <Description>
+      You are trying to finish a case without asserting a single diagnosis.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You need to assert a diagnosis to be able to sign out this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Please assert a diagnosis that matches the evidence in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "Done") (label "ArcNodeInterface") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332428188428") (delay "-15836567") (message_id "439") (message_id "439") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "3400") (source "ConsoleProtocolModule") (delay "-1332428185028") (message_id "1017") (message_id "1017") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="12" name="Case Needs Refined Findings" type="Done">
+    <Description>
+      While you have already added a correct diagnosis, some evidence that you've found still needs to be specified (refined)
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Some of the evidence identified in this case has not been fully specified. You need to fully describe all of your findings to sign out this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332877688317") (message_id "1076") (source "ConsoleProtocolModule") (delay "1332877688983") (message_id "1076") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17738, 3396, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877688517") (delay "200") (x "17738") (y "3396") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "1315") (message_id "1315") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept23") (object_description "Finding.Blister.Concept23") (entire_concept "Finding.Blister.Concept23") (source "ConsoleProtocolModule") (timestamp "1332877584565") (delay "-103952") (location "x=17878, y=3744, width=10, height=10") (power "high") (message_id "1321") (message_id "1321") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17738, 3396, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877584565") (delay "0") (x "17738") (y "3396") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "1315") (message_id "1315") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept24") (object_description "Finding.Fibrosis.Concept24") (entire_concept "Finding.Fibrosis.Concept24") (source "ConsoleProtocolModule") (timestamp "1332877584765") (delay "200") (location "x=18446, y=3780, width=10, height=10") (power "high") (message_id "1330") (message_id "1330") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17738, 3396, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877584965") (delay "200") (x "17738") (y "3396") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "1315") (message_id "1315") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymphocytes") (action "Add") (id "Concept25") (object_description "Finding.Lymphocytes.Concept25") (entire_concept "Finding.Lymphocytes.Concept25") (source "ConsoleProtocolModule") (timestamp "1332877585165") (delay "200") (location "x=18286, y=4048, width=10, height=10") (power "high") (message_id "1339") (message_id "1339") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17738, 3396, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877585365") (delay "200") (x "17738") (y "3396") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "1315") (message_id "1315") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Sclerosis") (action "Add") (id "Concept26") (object_description "AbsentFinding.Sclerosis.Concept26") (entire_concept "AbsentFinding.Sclerosis.Concept26") (source "ConsoleProtocolModule") (timestamp "1332877585565") (delay "200") (power "high") (view "x=17738, y=3396, width=1102, height=846") (message_id "1346") (message_id "1346") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept27") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept27") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept27") (source "ConsoleProtocolModule") (timestamp "1332877585765") (delay "200") (message_id "1353") (message_id "1353") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept28") (object_description "Diagnosis.BLISTER_ABOVE_SCAR.Concept28") (entire_concept "Diagnosis.BLISTER_ABOVE_SCAR.Concept28") (source "ConsoleProtocolModule") (timestamp "1332877585965") (delay "200") (message_id "1357") (message_id "1357") 
+      </Step>
+      <Step>
+        CE:  (type "Done") (label "ArcNodeInterface") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877586165") (delay "200") (message_id "1362") (message_id "1362") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "3600") (source "ConsoleProtocolModule") (delay "-1332877582565") (message_id "1030") (message_id "1030") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="Case Solved" type="Done">
+    <Description>
+      You are done with this case! All of the required findings, hypotheses and diagnoses have been identifed in the case.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You have FINISHED this case! You can now procede to the next case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1334172635932") (message_id "2242") (message_id "2242") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17597, 3668, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172636732") (x "17597") (y "3668") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "2267") (message_id "2267") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept1") (object_description "Finding.Blister.Concept1") (entire_concept "Finding.Blister.Concept1") (source "ArcNodeInterface") (timestamp "1334172636332") (location "x=17836, y=3743, width=10, height=10") (power "high") (message_id "2280") (message_id "2280") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept1") (id "Concept3") (object_description "Finding.Blister.Concept1:Attribute.Subepidermal.Concept3") (entire_concept "Finding.Subepidermal_Blister.Concept4") (source "ArcNodeInterface") (timestamp "1334172636532") (message_id "2290") (message_id "2290") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17597, 3668, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172636732") (x "17597") (y "3668") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "2267") (message_id "2267") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept5") (object_description "Finding.Fibrosis.Concept5") (entire_concept "Finding.Fibrosis.Concept5") (source "ArcNodeInterface") (timestamp "1334172636932") (location "x=17930, y=3945, width=10, height=10") (power "high") (message_id "2302") (message_id "2302") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Fibrosis.Concept5") (id "Concept7") (object_description "Finding.Fibrosis.Concept5:Attribute.Subepidermal.Concept7") (entire_concept "Finding.Subepidermal_Fibrosis.Concept8") (source "ArcNodeInterface") (timestamp "1334172637132") (message_id "2312") (message_id "2312") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(15666, 2254, 0.13)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172637332") (x "15666") (y "2254") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "2324") (message_id "2324") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymphocytes") (action "Add") (id "Concept9") (object_description "Finding.Lymphocytes.Concept9") (entire_concept "Finding.Lymphocytes.Concept9") (source "ArcNodeInterface") (timestamp "1334172637532") (location "x=17954, y=4542, width=10, height=10") (power "medium") (message_id "2336") (message_id "2336") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Lymphocytes.Concept9") (id "Concept11") (object_description "Finding.Lymphocytes.Concept9:Attribute.Inflammatory_Infiltrate.Concept11") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept13") (source "ArcNodeInterface") (timestamp "1334172637732") (message_id "2361") (message_id "2361") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Minimal") (action "Add") (parent "Finding.Lymphocytes.Concept9") (id "Concept12") (object_description "Finding.Lymphocytes.Concept9:Attribute.Minimal.Concept12") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept13") (source "ArcNodeInterface") (timestamp "1334172637932") (message_id "2362") (message_id "2362") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17590, 4078, 0.5)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172638132") (x "17590") (y "4078") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "2346") (message_id "2346") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Sclerosis") (action "Add") (id "Concept14") (object_description "AbsentFinding.Sclerosis.Concept14") (entire_concept "AbsentFinding.Sclerosis.Concept14") (source "ArcNodeInterface") (timestamp "1334172638332") (power "high") (view "x=17590, y=4078, width=1102, height=846") (message_id "2378") (message_id "2378") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept15") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept15") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept15") (source "ArcNodeInterface") (timestamp "1334172638532") (message_id "2385") (message_id "2385") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept16") (object_description "Diagnosis.BLISTER_ABOVE_SCAR.Concept16") (entire_concept "Diagnosis.BLISTER_ABOVE_SCAR.Concept16") (source "ArcNodeInterface") (timestamp "1334172638732") (message_id "2389") (message_id "2389") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1334172639132") (message_id "2398") (message_id "2398") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "HelpManager") (timestamp "1334172639332") (message_id "2402") (message_id "2402") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "finished") (username "guest") (condition "Immediate") (timestamp "1334172639532") (message_id "2406") (message_id "2406") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="11" name="Finding Not in Case" type="Finding">
+    <Description>
+      An asserted finding was not authored for a given a case and is either absent or diagnostically irrelevant.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a prominent feature in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a prominent feature in this case and should be removed.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete &lt;concept&gt;
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363915922") (message_id "310") (source "ConsoleProtocolModule") (delay "1332363916588") (message_id "310") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5923, 3649, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332363916122") (delay "200") (x "5923") (y "3649") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "351") (message_id "351") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Ballooning") (action "Add") (id "Concept1") (object_description "Finding.Ballooning.Concept1") (entire_concept "Finding.Ballooning.Concept1") (source "ConsoleProtocolModule") (timestamp "1332363916322") (delay "200") (location "x=7355, y=4553, width=10, height=10") (power "medium") (message_id "357") (message_id "357") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "3800") (source "ConsoleProtocolModule") (delay "-1332363912522") (message_id "1068") (message_id "1068") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="13" name="Finding Not in Case but Supports Diagnosis" type="Finding">
+    <Description>
+      Finding is not in case, but can supports an earlier asserted diagnosis
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a prominent feature in this case, but you can sometimes see &lt;concept&gt; in cases of &lt;diagnosis&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; is not a prominent feature in this case and should be removed.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete &lt;concept&gt;
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332945201314") (message_id "944") (source "ConsoleProtocolModule") (delay "1332945201980") (message_id "944") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11474, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945202314") (delay "1000") (x "9191") (y "11474") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1186") (message_id "1186") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept28") (object_description "Finding.Blister.Concept28") (entire_concept "Finding.Blister.Concept28") (source "ConsoleProtocolModule") (timestamp "1332945201714") (delay "-600") (location "x=10911, y=12158, width=10, height=10") (power "medium") (message_id "1192") (message_id "1192") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept29") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept29") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept29") (source "ConsoleProtocolModule") (timestamp "1332945201914") (delay "200") (message_id "1199") (message_id "1199") 
+      </Step>
+      <Step>
+        CE:  (type "Diagnosis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept30") (object_description "Diagnosis.BLISTER_ABOVE_SCAR.Concept30") (entire_concept "Diagnosis.BLISTER_ABOVE_SCAR.Concept30") (source "ConsoleProtocolModule") (timestamp "1332945202114") (delay "200") (message_id "1203") (message_id "1203") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9191, 11474, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332945202314") (delay "200") (x "9191") (y "11474") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1186") (message_id "1186") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept31") (object_description "Finding.Fibrosis.Concept31") (entire_concept "Finding.Fibrosis.Concept31") (source "ConsoleProtocolModule") (timestamp "1332945202514") (delay "200") (location "x=10923, y=12022, width=10, height=10") (power "medium") (message_id "1211") (message_id "1211") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "4000") (source "ConsoleProtocolModule") (delay "-1332945198514") (message_id "1084") (message_id "1084") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="17" name="Finding Observed at Low Power" type="Finding">
+    <Description>
+      The asserted finding is correct, but generally should be obersved at higher power
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is present in this case, but it is generally observed at &lt;power&gt; power.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is present in this case, but it is generally observed at &lt;power&gt; power.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332427500285") (message_id "52") (source "ConsoleProtocolModule") (delay "1332427500951") (message_id "52") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6967, 4401, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427440796") (delay "-59489") (x "6967") (y "4401") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "161") (message_id "161") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept9") (object_description "Finding.Neutrophils.Concept9") (entire_concept "Finding.Neutrophils.Concept9") (source "ConsoleProtocolModule") (timestamp "1332427440996") (delay "200") (location "x=7468, y=5802, width=10, height=10") (power "low") (message_id "238") (message_id "238") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "4200") (source "ConsoleProtocolModule") (delay "-1332427436796") (message_id "1113") (message_id "1113") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="25" name="Finding Should be Absent" type="Finding">
+    <Description>
+      The asserted finding was in fact authored as explicitly absent in this case.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Actually... there is no significant &lt;concept&gt; in this location, and the absence of &lt;concept&gt; is an important clue in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Actually... there is no significant &lt;concept&gt; in this location, and the absence of &lt;concept&gt; is an important clue in this case.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete the feature &lt;concept&gt; and mention its absence in the case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332427500285") (message_id "52") (source "ConsoleProtocolModule") (delay "1332427500951") (message_id "52") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(4927, 4319, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427500485") (delay "200") (x "4927") (y "4319") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "252") (message_id "252") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Mucin") (action "Add") (id "Concept10") (object_description "Finding.Mucin.Concept10") (entire_concept "Finding.Mucin.Concept10") (source "ConsoleProtocolModule") (timestamp "1332427500685") (delay "200") (location "x=7343, y=5967, width=10, height=10") (power "medium") (message_id "263") (message_id "263") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "4400") (source "ConsoleProtocolModule") (delay "-1332427496285") (message_id "1129") (message_id "1129") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="26" name="Finding is Not Important" type="Finding">
+    <Description>
+      Finding is in case, but not important for inferring diagnosis
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is present in this case. However, in the context of this domain and case, &lt;concept&gt; in this location is not significant in deducing the correct diagnosis.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct that &lt;concept&gt; is present in this case. However, in the context of this domain and case, &lt;concept&gt; in this location is not significant in deducing the correct diagnosis.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332427787700") (message_id "305") (source "ConsoleProtocolModule") (delay "1332427788366") (message_id "305") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(8683, 10323, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427787900") (delay "200") (x "8683") (y "10323") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "343") (message_id "343") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymphocytes") (action "Add") (id "Concept3") (object_description "Finding.Lymphocytes.Concept3") (entire_concept "Finding.Lymphocytes.Concept3") (source "ConsoleProtocolModule") (timestamp "1332427788100") (delay "200") (location "x=9811, y=11027, width=10, height=10") (power "medium") (message_id "350") (message_id "350") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "4600") (source "ConsoleProtocolModule") (delay "-1332427783500") (message_id "1145") (message_id "1145") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="128" name="Finding is Too General" type="Finding">
+    <Description>
+      Finding is way too general
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The finding &lt;concept&gt; is too general to be useful in solving this case. Please identify a more specific concept.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You should either specify &lt;concept&gt; further, or delete it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9029, 10838, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427975204") (delay "-16049791") (x "9029") (y "10838") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "399") (message_id "399") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Inflammatory_Response") (action "Add") (id "Concept2") (object_description "Finding.Inflammatory_Response.Concept2") (entire_concept "Finding.Inflammatory_Response.Concept2") (source "ConsoleProtocolModule") (timestamp "1332427840252") (delay "-134952") (location "x=9877, y=11298, width=10, height=10") (power "medium") (message_id "405") (message_id "405") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "4800") (source "ConsoleProtocolModule") (delay "-1332427835452") (message_id "1161") (message_id "1161") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="15" name="Incorrect Finding Location" type="Finding">
+    <Description>
+      The asserted finding is indeed present in this case, however it is was asserted at Incorrect Location.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          There is &lt;concept&gt; present, but not where you have pointed in the image. See if you can find where.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          This is the general area where you can see &lt;concept&gt;.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the area with &lt;concept&gt;.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area that shows &lt;concept&gt; particularly well.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9029, 10838, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427975204") (delay "-16049791") (x "9029") (y "10838") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "399") (message_id "399") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept3") (object_description "Finding.Blister.Concept3") (entire_concept "Finding.Blister.Concept3") (source "ConsoleProtocolModule") (timestamp "1332427975404") (delay "200") (location "x=9837, y=11962, width=10, height=10") (power "medium") (message_id "421") (message_id "421") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "5000") (source "ConsoleProtocolModule") (delay "-1332427970404") (message_id "1177") (message_id "1177") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry name="No Such Concept in Domain" type="Finding">
+    <Description>
+      This state is impossible to encounter since the tutor's user interface restricts which concepts can be asserted to only concepts in the domain. This state is reserved for cases where user interface would be more open ended.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The concept, &lt;concept&gt;, is not typically considered an important concept in the current domain. Although it may be identified in this case, it generally does not pose a factor in determining the correct diagnosis in this domain.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Absent Finding" type="Hint">
+    <Description>
+      There is an important finding that is absent in this case. Absence of this finding is an important factor in coming to a correct diagnosis.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There's something important to recognize here.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area where you can say something about  &lt;feature&gt;.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In this case, there is NO &lt;feature&gt; and that's an important thing to recognize. Be as specific as is appropriate for this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(7977, 10394, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332428570012") (delay "-15454983") (x "7977") (y "10394") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "453") (message_id "453") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept6") (object_description "Finding.Blister.Concept6") (entire_concept "Finding.Blister.Concept6") (source "ConsoleProtocolModule") (timestamp "1332428570212") (delay "200") (location "x=10993, y=12178, width=10, height=10") (power "medium") (message_id "459") (message_id "459") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept6") (id "Concept8") (object_description "Finding.Blister.Concept6:Attribute.Subepidermal.Concept8") (entire_concept "Finding.Subepidermal_Blister.Concept9") (source "ConsoleProtocolModule") (timestamp "1332428570412") (delay "200") (message_id "466") (message_id "466") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(8653, 10610, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332428571412") (delay "1000") (x "8653") (y "10610") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "472") (message_id "472") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept10") (object_description "Finding.Neutrophils.Concept10") (entire_concept "Finding.Neutrophils.Concept10") (source "ConsoleProtocolModule") (timestamp "1332428570812") (delay "-600") (location "x=9665, y=11274, width=10, height=10") (power "medium") (message_id "479") (message_id "479") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept10") (id "Concept12") (object_description "Finding.Neutrophils.Concept10:Attribute.Inflammatory_Infiltrate.Concept12") (entire_concept "Finding.Neutrophilic_Inflammatory_Infiltrate.Concept13") (source "ConsoleProtocolModule") (timestamp "1332428571012") (delay "200") (message_id "487") (message_id "487") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Moderate") (action "Add") (parent "Finding.Neutrophils.Concept10") (id "Concept14") (object_description "Finding.Neutrophils.Concept10:Attribute.Moderate.Concept14") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept15") (source "ConsoleProtocolModule") (timestamp "1332428571212") (delay "200") (message_id "495") (message_id "495") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(8653, 10610, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332428571412") (delay "200") (x "8653") (y "10610") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "472") (message_id "472") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept16") (object_description "Finding.Nuclear_Dust.Concept16") (entire_concept "Finding.Nuclear_Dust.Concept16") (source "ConsoleProtocolModule") (timestamp "1332428571612") (delay "200") (location "x=9449, y=11034, width=10, height=10") (power "medium") (message_id "505") (message_id "505") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332428571812") (delay "200") (message_id "510") (message_id "510") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332428572012") (delay "200") (message_id "514") (message_id "514") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332428572212") (delay "200") (message_id "519") (message_id "519") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332428572412") (delay "200") (message_id "524") (message_id "524") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "5200") (source "ConsoleProtocolModule") (delay "-1332428567212") (message_id "1193") (message_id "1193") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Another Attribute" type="Hint">
+    <Description>
+      You already started to specify some feature (added an attribute), but you have to go a bit further w/ your description (add another attribute)
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You have already started to further specify &lt;feature&gt;, however there is more to say about it.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You need to add addtional qualities to further specify &lt;feature&gt;. Some possible qualities are: &lt;potential_attributes&gt; .
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In the context of this case &lt;finding&gt; is the best way to describe this feature.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332427500285") (message_id "52") (source "ConsoleProtocolModule") (delay "1332427500951") (message_id "52") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6967, 4401, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427440796") (delay "-59489") (x "6967") (y "4401") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "161") (message_id "161") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept5") (object_description "Finding.Neutrophils.Concept5") (entire_concept "Finding.Neutrophils.Concept5") (source "ConsoleProtocolModule") (timestamp "1332427258252") (delay "-182544") (location "x=7453, y=4853, width=10, height=10") (power "high") (message_id "168") (message_id "168") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept5") (id "Concept7") (object_description "Finding.Neutrophils.Concept5:Attribute.Inflammatory_Infiltrate.Concept7") (entire_concept "Finding.Neutrophilic_Inflammatory_Infiltrate.Concept8") (source "ConsoleProtocolModule") (timestamp "1332427258452") (delay "200") (message_id "175") (message_id "175") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427258652") (delay "200") (message_id "181") (message_id "181") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427258852") (delay "200") (message_id "185") (message_id "185") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427259052") (delay "200") (message_id "188") (message_id "188") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427259252") (delay "200") (message_id "191") (message_id "191") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "5400") (source "ConsoleProtocolModule") (delay "-1332427253852") (message_id "1243") (message_id "1243") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Attribute" type="Hint">
+    <Description>
+      Need to specify the finding further (add an attribute) to make it a more meaningful diagnostic evidence.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;feature&gt; in this case. However you should describe or specify it further to make it a meaningful evidence.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You are correct to mention &lt;feature&gt; in this case. However you should describe or specify it further to make it a meaningful evidence.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          To further describe or specify &lt;feature&gt; you need to add qualities to it. Some possible qualities are: &lt;potential_attributes&gt; .
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In the context of this case &lt;finding&gt; is the best way to describe this feature.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332427500285") (message_id "52") (source "ConsoleProtocolModule") (delay "1332427500951") (message_id "52") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5455, 2997, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332427194147") (delay "-306138") (x "5455") (y "2997") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "118") (message_id "118") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept4") (object_description "Finding.Blister.Concept4") (entire_concept "Finding.Blister.Concept4") (source "ConsoleProtocolModule") (timestamp "1332427194347") (delay "200") (location "x=6591, y=3649, width=10, height=10") (power "medium") (message_id "124") (message_id "124") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427194547") (delay "200") (message_id "129") (message_id "129") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427194747") (delay "200") (message_id "133") (message_id "133") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427194947") (delay "200") (message_id "136") (message_id "136") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332427195147") (delay "200") (message_id "139") (message_id "139") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "5600") (source "ConsoleProtocolModule") (delay "-1332427189547") (message_id "1275") (message_id "1275") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Diagnosis" type="Hint">
+    <Description>
+      You should now add a diagnosis to a case.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; has all of the expected features: &lt;findings&gt;. This would be one reasonable diagnosis in this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332877688317") (message_id "1076") (source "ConsoleProtocolModule") (delay "1332877688983") (message_id "1076") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "-359952") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept5") (object_description "Finding.Blister.Concept5") (entire_concept "Finding.Blister.Concept5") (source "ConsoleProtocolModule") (timestamp "1332877326565") (delay "-1800") (location "x=17833, y=3744, width=10, height=10") (power "high") (message_id "1175") (message_id "1175") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "1800") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept6") (object_description "Finding.Fibrosis.Concept6") (entire_concept "Finding.Fibrosis.Concept6") (source "ConsoleProtocolModule") (timestamp "1332877326965") (delay "-1400") (location "x=18465, y=3774, width=10, height=10") (power "high") (message_id "1183") (message_id "1183") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept5") (id "Concept7") (object_description "Finding.Blister.Concept5:Attribute.Subepidermal.Concept7") (entire_concept "Finding.Subepidermal_Blister.Concept8") (source "ConsoleProtocolModule") (timestamp "1332877327165") (delay "200") (message_id "1190") (message_id "1190") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Fibrosis.Concept6") (id "Concept9") (object_description "Finding.Fibrosis.Concept6:Attribute.Subepidermal.Concept9") (entire_concept "Finding.Subepidermal_Fibrosis.Concept10") (source "ConsoleProtocolModule") (timestamp "1332877327365") (delay "200") (message_id "1197") (message_id "1197") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "1000") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymphocytes") (action "Add") (id "Concept11") (object_description "Finding.Lymphocytes.Concept11") (entire_concept "Finding.Lymphocytes.Concept11") (source "ConsoleProtocolModule") (timestamp "1332877327765") (delay "-600") (location "x=18101, y=4144, width=10, height=10") (power "high") (message_id "1206") (message_id "1206") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Lymphocytes.Concept11") (id "Concept13") (object_description "Finding.Lymphocytes.Concept11:Attribute.Inflammatory_Infiltrate.Concept13") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept15") (source "ConsoleProtocolModule") (timestamp "1332877327965") (delay "200") (message_id "1215") (message_id "1215") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Minimal") (action "Add") (parent "Finding.Lymphocytes.Concept11") (id "Concept14") (object_description "Finding.Lymphocytes.Concept11:Attribute.Minimal.Concept14") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept15") (source "ConsoleProtocolModule") (timestamp "1332877328165") (delay "200") (message_id "1216") (message_id "1216") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "200") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Sclerosis") (action "Add") (id "Concept16") (object_description "AbsentFinding.Sclerosis.Concept16") (entire_concept "AbsentFinding.Sclerosis.Concept16") (source "ConsoleProtocolModule") (timestamp "1332877328565") (delay "200") (power "high") (view "x=17601, y=3440, width=1102, height=846") (message_id "1226") (message_id "1226") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept17") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept17") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept17") (source "ConsoleProtocolModule") (timestamp "1332877328765") (delay "200") (message_id "1233") (message_id "1233") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877328965") (delay "200") (message_id "1238") (message_id "1238") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877329165") (delay "200") (message_id "1241") (message_id "1241") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877329365") (delay "200") (message_id "1244") (message_id "1244") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877329565") (delay "200") (message_id "1248") (message_id "1248") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "5800") (source "ConsoleProtocolModule") (delay "-1332877323765") (message_id "1304") (message_id "1304") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Finding" type="Hint">
+    <Description>
+      There is an important finding that should be identified on the slide, It is an important factor in coming to a correct diagnosis
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There's something important to recognize here.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area where you can see &lt;feature&gt;. See if you can find where.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the area of &lt;feature&gt;
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area that shows &lt;feature&gt; particularly well.
+        </Message>
+        <Action action="moveViewer" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an example of  &lt;feature&gt;.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You should put &lt;feature&gt; as evidence. Be as specific as is appropriate for this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363915922") (message_id "310") (source "ConsoleProtocolModule") (delay "1332363916588") (message_id "310") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363786840") (delay "-129082") (message_id "317") (message_id "317") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363787040") (delay "200") (message_id "319") (message_id "319") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363787240") (delay "200") (message_id "322") (message_id "322") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363787440") (delay "200") (message_id "326") (message_id "326") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363787640") (delay "200") (message_id "331") (message_id "331") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363787840") (delay "200") (message_id "334") (message_id "334") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363788040") (delay "200") (message_id "337") (message_id "337") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "5 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363788240") (delay "200") (message_id "340") (message_id "340") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "6 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363788440") (delay "200") (message_id "345") (message_id "345") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "6000") (source "ConsoleProtocolModule") (delay "-1332363782440") (message_id "1366") (message_id "1366") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Hypothesis" type="Hint">
+    <Description>
+      Given a set of asserted findings there is a hypothesis that can  be asserted.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There are more hypotheses you should consider in this case.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Based on histology alone, a reasonable hypothesis here would be &lt;concept&gt;, because it  fits well with the findings that you've identified.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9663, 11554, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444025195") (delay "200") (x "9663") (y "11554") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "606") (message_id "606") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept19") (object_description "Finding.Blister.Concept19") (entire_concept "Finding.Blister.Concept19") (source "ConsoleProtocolModule") (timestamp "1332444025395") (delay "200") (location "x=11019, y=12206, width=10, height=10") (power "medium") (message_id "619") (message_id "619") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept19") (id "Concept20") (object_description "Finding.Blister.Concept19:Attribute.Subepidermal.Concept20") (entire_concept "Finding.Subepidermal_Blister.Concept21") (source "ConsoleProtocolModule") (timestamp "1332444025595") (delay "200") (message_id "626") (message_id "626") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9263, 11358, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444025795") (delay "200") (x "9263") (y "11358") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "630") (message_id "630") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept22") (object_description "Finding.Neutrophils.Concept22") (entire_concept "Finding.Neutrophils.Concept22") (source "ConsoleProtocolModule") (timestamp "1332444025995") (delay "200") (location "x=9767, y=11758, width=10, height=10") (power "medium") (message_id "637") (message_id "637") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept22") (id "Concept23") (object_description "Finding.Neutrophils.Concept22:Attribute.Inflammatory_Infiltrate.Concept23") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept25") (source "ConsoleProtocolModule") (timestamp "1332444026195") (delay "200") (message_id "646") (message_id "646") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Moderate") (action "Add") (parent "Finding.Neutrophils.Concept22") (id "Concept24") (object_description "Finding.Neutrophils.Concept22:Attribute.Moderate.Concept24") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept25") (source "ConsoleProtocolModule") (timestamp "1332444026395") (delay "200") (message_id "647") (message_id "647") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444026595") (delay "200") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept26") (object_description "Finding.Nuclear_Dust.Concept26") (entire_concept "Finding.Nuclear_Dust.Concept26") (source "ConsoleProtocolModule") (timestamp "1332444026795") (delay "200") (location "x=9811, y=11498, width=10, height=10") (power "medium") (message_id "663") (message_id "663") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444026995") (delay "200") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept27") (object_description "AbsentFinding.Mucin.Concept27") (entire_concept "AbsentFinding.Mucin.Concept27") (source "ConsoleProtocolModule") (timestamp "1332444027195") (delay "200") (power "medium") (view "x=9079, y=10742, width=2204, height=1692") (message_id "670") (message_id "670") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Reticular_Dermis") (action "Add") (parent "AbsentFinding.Mucin.Concept27") (id "Concept29") (object_description "AbsentFinding.Mucin.Concept27:Attribute.Reticular_Dermis.Concept29") (entire_concept "AbsentFinding.Mucin_in_Reticular_Dermis.Concept30") (source "ConsoleProtocolModule") (timestamp "1332444027395") (delay "200") (message_id "678") (message_id "678") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027595") (delay "200") (message_id "683") (message_id "683") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027795") (delay "200") (message_id "686") (message_id "686") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027995") (delay "200") (message_id "689") (message_id "689") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444028195") (delay "200") (message_id "692") (message_id "692") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444028395") (delay "200") (message_id "696") (message_id "696") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444028595") (delay "200") (message_id "699") (message_id "699") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1332444028795") (source "ConsoleProtocolModule") (delay "200") (message_id "1405") (message_id "1405") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Similar Absent Finding" type="Hint">
+    <Description>
+      When you need to specify absent finding and similar finding or lack of it was already mentioned
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You have already mentioned &lt;sibling&gt;, however there is another kind of &lt;feature&gt; that is important in this case.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area where you can say something about  &lt;feature&gt;.
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          In this case, there is NO &lt;feature&gt; and that's an important thing to recognize. Be as specific as is appropriate for this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/NodularDiffuseDermatitis/HA_1272.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/NodularDiffuseDermatitis.owl") (timestamp "1334171140258") (message_id "1038") (message_id "1038") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(56117, 7154, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334171140858") (x "56117") (y "7154") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "1093") (message_id "1093") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lipophages") (action "Add") (id "Concept2") (object_description "Finding.Lipophages.Concept2") (entire_concept "Finding.Lipophages.Concept2") (source "ArcNodeInterface") (timestamp "1334171140658") (location "x=56337, y=7341, width=10, height=10") (power "high") (message_id "1104") (message_id "1104") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(56117, 7154, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334171140858") (x "56117") (y "7154") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "1093") (message_id "1093") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Histiocytes") (action "Add") (id "Concept3") (object_description "Finding.Histiocytes.Concept3") (entire_concept "Finding.Histiocytes.Concept3") (source "ArcNodeInterface") (timestamp "1334171141058") (location "x=56300, y=7357, width=10, height=10") (power "high") (message_id "1117") (message_id "1117") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Histiocytes.Concept3") (id "Concept4") (object_description "Finding.Histiocytes.Concept3:Attribute.Inflammatory_Infiltrate.Concept4") (entire_concept "Finding.Diffuse_Histiocytic_Inflammatory_Infiltrate.Concept6") (source "ArcNodeInterface") (timestamp "1334171141258") (message_id "1135") (message_id "1135") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Diffuse") (action "Add") (parent "Finding.Histiocytes.Concept3") (id "Concept5") (object_description "Finding.Histiocytes.Concept3:Attribute.Diffuse.Concept5") (entire_concept "Finding.Diffuse_Histiocytic_Inflammatory_Infiltrate.Concept6") (source "ArcNodeInterface") (timestamp "1334171141458") (message_id "1136") (message_id "1136") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "HelpManager") (timestamp "1334171141658") (message_id "1144") (message_id "1144") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 3") (action "Request") (source "HelpManager") (timestamp "1334171141858") (message_id "1148") (message_id "1148") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 3") (action "Request") (source "HelpManager") (timestamp "1334171142058") (message_id "1153") (message_id "1153") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 3") (action "Request") (source "HelpManager") (timestamp "1334171142258") (message_id "1158") (message_id "1158") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1334171142458") (message_id "1162") (message_id "1162") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="Missing Similar Finding" type="Hint">
+    <Description>
+      While you have already identified one instance of finding there is another instance of similar finding that should be identified,
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There's something important to recognize here.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You have already mentioned &lt;sibling&gt;, however there is another kind of &lt;feature&gt; that is important in this case.
+        </Message>
+        <Action action="moveViewer" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is the area of another kind of &lt;feature&gt;
+        </Message>
+        <Action action="showAnnotation" input="location" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an area that shows &lt;feature&gt; particularly well.
+        </Message>
+        <Action action="moveViewer" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          This is an example of  &lt;feature&gt;.
+        </Message>
+        <Action action="showAnnotation" input="example" receiver="PresentationModule">
+        </Action>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          You should put &lt;feature&gt; as evidence. Be as specific as is appropriate for this case.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332877065621") (message_id "963") (source "ConsoleProtocolModule") (delay "1332877066287") (message_id "963") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5275, 2542, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877066221") (delay "600") (x "5275") (y "2542") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "977") (message_id "977") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept1") (object_description "Finding.Blister.Concept1") (entire_concept "Finding.Blister.Concept1") (source "ConsoleProtocolModule") (timestamp "1332877066021") (delay "-200") (location "x=6659, y=3566, width=10, height=10") (power "medium") (message_id "983") (message_id "983") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5275, 2542, 0.13)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877066221") (delay "200") (x "5275") (y "2542") (width "4408") (height "3384") (scale "0.13") (auto "false") (message_id "977") (message_id "977") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept3") (object_description "Finding.Neutrophils.Concept3") (entire_concept "Finding.Neutrophils.Concept3") (source "ConsoleProtocolModule") (timestamp "1332877066421") (delay "200") (location "x=6579, y=3790, width=10, height=10") (power "medium") (message_id "991") (message_id "991") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept1") (id "Concept5") (object_description "Finding.Blister.Concept1:Attribute.Subepidermal.Concept5") (entire_concept "Finding.Subepidermal_Blister.Concept6") (source "ConsoleProtocolModule") (timestamp "1332877066621") (delay "200") (message_id "999") (message_id "999") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Isolated") (action "Add") (parent "Finding.Neutrophils.Concept3") (id "Concept7") (object_description "Finding.Neutrophils.Concept3:Attribute.Isolated.Concept7") (entire_concept "Finding.Isolated_Neutrophils_in_Blister.Concept9") (source "ConsoleProtocolModule") (timestamp "1332877066821") (delay "200") (message_id "1007") (message_id "1007") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Blister") (action "Add") (parent "Finding.Neutrophils.Concept3") (id "Concept8") (object_description "Finding.Neutrophils.Concept3:Attribute.Blister.Concept8") (entire_concept "Finding.Isolated_Neutrophils_in_Blister.Concept9") (source "ConsoleProtocolModule") (timestamp "1332877067021") (delay "200") (message_id "1008") (message_id "1008") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877067221") (delay "200") (message_id "1014") (message_id "1014") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877067421") (delay "200") (message_id "1017") (message_id "1017") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877067621") (delay "200") (message_id "1020") (message_id "1020") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "3 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877067821") (delay "200") (message_id "1025") (message_id "1025") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "4 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877068021") (delay "200") (message_id "1030") (message_id "1030") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "5 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877068221") (delay "200") (message_id "1033") (message_id "1033") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "6 of 6") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877068421") (delay "200") (message_id "1038") (message_id "1038") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "6400") (source "ConsoleProtocolModule") (delay "-1332877062021") (message_id "1499") (message_id "1499") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="No Diagnoses Yet" type="Hint">
+    <Description>
+      You already specified all findings and hypothesis. You should now start comming up with a potential diagnosis.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          You should be able to make a diagnosis at this point. Click on the "D" button and select a hypothesis to move down into the diagnosis space.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332877688317") (message_id "1076") (source "ConsoleProtocolModule") (delay "1332877688983") (message_id "1076") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "-359952") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept5") (object_description "Finding.Blister.Concept5") (entire_concept "Finding.Blister.Concept5") (source "ConsoleProtocolModule") (timestamp "1332877326565") (delay "-1800") (location "x=17833, y=3744, width=10, height=10") (power "high") (message_id "1175") (message_id "1175") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "1800") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept6") (object_description "Finding.Fibrosis.Concept6") (entire_concept "Finding.Fibrosis.Concept6") (source "ConsoleProtocolModule") (timestamp "1332877326965") (delay "-1400") (location "x=18465, y=3774, width=10, height=10") (power "high") (message_id "1183") (message_id "1183") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept5") (id "Concept7") (object_description "Finding.Blister.Concept5:Attribute.Subepidermal.Concept7") (entire_concept "Finding.Subepidermal_Blister.Concept8") (source "ConsoleProtocolModule") (timestamp "1332877327165") (delay "200") (message_id "1190") (message_id "1190") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Fibrosis.Concept6") (id "Concept9") (object_description "Finding.Fibrosis.Concept6:Attribute.Subepidermal.Concept9") (entire_concept "Finding.Subepidermal_Fibrosis.Concept10") (source "ConsoleProtocolModule") (timestamp "1332877327365") (delay "200") (message_id "1197") (message_id "1197") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "1000") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Lymphocytes") (action "Add") (id "Concept11") (object_description "Finding.Lymphocytes.Concept11") (entire_concept "Finding.Lymphocytes.Concept11") (source "ConsoleProtocolModule") (timestamp "1332877327765") (delay "-600") (location "x=18101, y=4144, width=10, height=10") (power "high") (message_id "1206") (message_id "1206") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Lymphocytes.Concept11") (id "Concept13") (object_description "Finding.Lymphocytes.Concept11:Attribute.Inflammatory_Infiltrate.Concept13") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept15") (source "ConsoleProtocolModule") (timestamp "1332877327965") (delay "200") (message_id "1215") (message_id "1215") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Minimal") (action "Add") (parent "Finding.Lymphocytes.Concept11") (id "Concept14") (object_description "Finding.Lymphocytes.Concept11:Attribute.Minimal.Concept14") (entire_concept "Finding.Minimal_Lymphocytic_Inflammatory_Infiltrate.Concept15") (source "ConsoleProtocolModule") (timestamp "1332877328165") (delay "200") (message_id "1216") (message_id "1216") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(16905, 2501, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332877328365") (delay "200") (x "16905") (y "2501") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "1134") (message_id "1134") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Sclerosis") (action "Add") (id "Concept16") (object_description "AbsentFinding.Sclerosis.Concept16") (entire_concept "AbsentFinding.Sclerosis.Concept16") (source "ConsoleProtocolModule") (timestamp "1332877328565") (delay "200") (power "high") (view "x=17601, y=3440, width=1102, height=846") (message_id "1226") (message_id "1226") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "BLISTER_ABOVE_SCAR") (action "Add") (id "Concept17") (object_description "Hypothesis.BLISTER_ABOVE_SCAR.Concept17") (entire_concept "Hypothesis.BLISTER_ABOVE_SCAR.Concept17") (source "ConsoleProtocolModule") (timestamp "1332877328765") (delay "200") (message_id "1233") (message_id "1233") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877328965") (delay "200") (message_id "1238") (message_id "1238") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332877329165") (delay "200") (message_id "1241") (message_id "1241") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "6600") (source "ConsoleProtocolModule") (delay "-1332877322565") (message_id "1553") (message_id "1553") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="2" name="No Findings Yet" type="Hint">
+    <Description>
+      No findings have been identified yet.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          There are important visual cues that you should look for. Click first on the F button and then click on a visual cue in the image.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332363766048") (message_id "281") (source "ConsoleProtocolModule") (delay "1332363766714") (message_id "281") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363751216") (delay "-14832") (message_id "288") (message_id "288") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 1") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332363751416") (delay "200") (message_id "290") (message_id "290") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "6800") (source "ConsoleProtocolModule") (delay "-1332363744616") (message_id "1608") (message_id "1608") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="1" name="No Hypotheses Yet" type="Hint">
+    <Description>
+      Now that all findings have been identified you should start forming a hypothesis.
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          At this point, you should probably start trying to think about what this could be.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Click on the H button and select a hypothesis.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_72.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332444024995") (message_id "358") (source "ConsoleProtocolModule") (delay "1332444025661") (message_id "358") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444025195") (delay "2000") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept32") (object_description "Finding.Blister.Concept32") (entire_concept "Finding.Blister.Concept32") (source "ConsoleProtocolModule") (timestamp "1332444025395") (delay "-1600") (location "x=10959, y=12106, width=10, height=10") (power "medium") (message_id "742") (message_id "742") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Subepidermal") (action "Add") (parent "Finding.Blister.Concept32") (id "Concept33") (object_description "Finding.Blister.Concept32:Attribute.Subepidermal.Concept33") (entire_concept "Finding.Subepidermal_Blister.Concept34") (source "ConsoleProtocolModule") (timestamp "1332444025595") (delay "200") (message_id "749") (message_id "749") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444025795") (delay "1400") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept35") (object_description "Finding.Neutrophils.Concept35") (entire_concept "Finding.Neutrophils.Concept35") (source "ConsoleProtocolModule") (timestamp "1332444025995") (delay "-1000") (location "x=10067, y=11318, width=10, height=10") (power "medium") (message_id "758") (message_id "758") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Inflammatory_Infiltrate") (action "Add") (parent "Finding.Neutrophils.Concept35") (id "Concept36") (object_description "Finding.Neutrophils.Concept35:Attribute.Inflammatory_Infiltrate.Concept36") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept38") (source "ConsoleProtocolModule") (timestamp "1332444026195") (delay "200") (message_id "767") (message_id "767") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Moderate") (action "Add") (parent "Finding.Neutrophils.Concept35") (id "Concept37") (object_description "Finding.Neutrophils.Concept35:Attribute.Moderate.Concept37") (entire_concept "Finding.Moderate_Neutrophilic_Inflammatory_Infiltrate.Concept38") (source "ConsoleProtocolModule") (timestamp "1332444026395") (delay "200") (message_id "768") (message_id "768") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444026595") (delay "600") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept39") (object_description "Finding.Nuclear_Dust.Concept39") (entire_concept "Finding.Nuclear_Dust.Concept39") (source "ConsoleProtocolModule") (timestamp "1332444026795") (delay "-200") (location "x=9927, y=11194, width=10, height=10") (power "medium") (message_id "780") (message_id "780") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(9079, 10742, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332444026995") (delay "200") (x "9079") (y "10742") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "656") (message_id "656") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept40") (object_description "AbsentFinding.Mucin.Concept40") (entire_concept "AbsentFinding.Mucin.Concept40") (source "ConsoleProtocolModule") (timestamp "1332444027195") (delay "200") (power "medium") (view "x=9079, y=10742, width=2204, height=1692") (message_id "787") (message_id "787") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Reticular_Dermis") (action "Add") (parent "AbsentFinding.Mucin.Concept40") (id "Concept41") (object_description "AbsentFinding.Mucin.Concept40:Attribute.Reticular_Dermis.Concept41") (entire_concept "AbsentFinding.Mucin_in_Reticular_Dermis.Concept42") (source "ConsoleProtocolModule") (timestamp "1332444027395") (delay "200") (message_id "795") (message_id "795") 
+      </Step>
+      <Step>
+        CE:  (type "Hint") (label "Hint") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027595") (delay "200") (message_id "800") (message_id "800") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "1 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027795") (delay "200") (message_id "804") (message_id "804") 
+      </Step>
+      <Step>
+        CE:  (type "HintLevel") (label "2 of 2") (action "Request") (source "ConsoleProtocolModule") (timestamp "1332444027995") (delay "200") (message_id "807") (message_id "807") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1332444028195") (source "ConsoleProtocolModule") (delay "-1332444020995") (message_id "1625") (message_id "1625") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="13" name="Hypothesis Became Inconsistent" type="Hypothesis">
+    <Description>
+      Evidence set got changed, and hypothesis became inconsistant.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The hypothesis, &lt;concept&gt;, is not supported by evidence identified in this case now.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The hypothesis, &lt;concept&gt;, is not supported by all of the evidence identified in this case now.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Findings &lt;findings&gt; contradict hypothesis &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete the hypothesis of &lt;concept&gt; because not all of the identified findings support it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6098, 3956, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507603910") (delay "-792440") (x "6098") (y "3956") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "671") (message_id "671") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept34") (object_description "Finding.Nuclear_Dust.Concept34") (entire_concept "Finding.Nuclear_Dust.Concept34") (source "ConsoleProtocolModule") (timestamp "1332507603110") (delay "-800") (location "x=7482, y=4724, width=10, height=10") (power "medium") (message_id "678") (message_id "678") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6098, 3956, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507603910") (delay "800") (x "6098") (y "3956") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "671") (message_id "671") 
+      </Step>
+      <Step>
+        CE:  (type "AbsentFinding") (label "Mucin") (action "Add") (id "Concept35") (object_description "AbsentFinding.Mucin.Concept35") (entire_concept "AbsentFinding.Mucin.Concept35") (source "ConsoleProtocolModule") (timestamp "1332507603510") (delay "-400") (power "medium") (view "x=6098, y=3956, width=2204, height=1692") (message_id "685") (message_id "685") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "SWEETS_SYNDROME") (action "Add") (id "Concept36") (object_description "Hypothesis.SWEETS_SYNDROME.Concept36") (entire_concept "Hypothesis.SWEETS_SYNDROME.Concept36") (source "ConsoleProtocolModule") (timestamp "1332507603710") (delay "200") (message_id "692") (message_id "692") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6098, 3956, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507603910") (delay "200") (x "6098") (y "3956") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "671") (message_id "671") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Delete") (id "Concept34") (object_description "Finding.Nuclear_Dust.Concept34") (entire_concept "Finding.Nuclear_Dust.Concept34") (source "ConsoleProtocolModule") (timestamp "1332507604110") (delay "200") (location "x=7482, y=4724, width=10, height=10") (power "medium") (message_id "698") (message_id "698") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "7200") (source "ConsoleProtocolModule") (delay "-1332507596910") (message_id "1682") (message_id "1682") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="12" name="Hypothesis Contradicts Some Findings" type="Hypothesis">
+    <Description>
+      Hypothesis contradicts some asserted evidence. This state only applies If reasoner hypotheses mode is set to 'all'.  That is asserted hypothesis must be satisfied by ALL evidence asserted by user.
+
+##SimpleDiagnosticReasoner.hypotheses.inference.mode=all##
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The proposed hypothesis &lt;concept&gt; does not match ALL of the identified findings in this case.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          The proposed hypothesis &lt;concept&gt; does not match ALL of the identified findings in this case.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Findings &lt;findings&gt; contradict hypothesis &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+      <MessageEntry>
+        <Message>
+          Delete hypothesis &lt;concept&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_11.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1334171942595") (message_id "1505") (message_id "1505") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17540, 3545, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334171942795") (x "17540") (y "3545") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "1610") (message_id "1610") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept5") (object_description "Finding.Blister.Concept5") (entire_concept "Finding.Blister.Concept5") (source "ArcNodeInterface") (timestamp "1334171942995") (location "x=17859, y=3743, width=10, height=10") (power "high") (message_id "1623") (message_id "1623") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(17465, 3808, 1.0)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334171943195") (x "17465") (y "3808") (width "551") (height "423") (scale "1.0") (auto "false") (message_id "1629") (message_id "1629") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Fibrosis") (action "Add") (id "Concept6") (object_description "Finding.Fibrosis.Concept6") (entire_concept "Finding.Fibrosis.Concept6") (source "ArcNodeInterface") (timestamp "1334171943395") (location "x=17787, y=4017, width=10, height=10") (power "high") (message_id "1640") (message_id "1640") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "DERMATITIS_HERPETIFORMIS") (action "Add") (id "Concept8") (object_description "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept8") (entire_concept "Hypothesis.DERMATITIS_HERPETIFORMIS.Concept8") (source "ArcNodeInterface") (timestamp "1334171943595") (message_id "1647") (message_id "1647") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1334171943795") (message_id "1653") (message_id "1653") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="11" name="Hypothesis Doesn't Match Any Findings" type="Hypothesis">
+    <Description>
+      You have not asserted any finding that supports this hypothesis
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;concept&gt; might be a reasonable hypothesis, but you should have at least one finding in it's favor first.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the hypothesis of &lt;concept&gt; because you don't have any supportive findings for it, or try to find at least one finding that supports it.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6264, 4072, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507938462") (delay "-457888") (x "6264") (y "4072") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "753") (message_id "753") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept39") (object_description "Finding.Nuclear_Dust.Concept39") (entire_concept "Finding.Nuclear_Dust.Concept39") (source "ConsoleProtocolModule") (timestamp "1332507818382") (delay "-120080") (location "x=7252, y=4876, width=10, height=10") (power "medium") (message_id "760") (message_id "760") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept40") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept40") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept40") (source "ConsoleProtocolModule") (timestamp "1332507818582") (delay "200") (message_id "767") (message_id "767") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "7400") (source "ConsoleProtocolModule") (delay "-1332507811182") (message_id "1711") (message_id "1711") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="115" name="Hypothesis is Too General" type="Hypothesis">
+    <Description>
+      Asserted hypothesis is to general to be useful
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          The hypothesis  &lt;concept&gt; is too general to be useful.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Please remove &lt;concept&gt;
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "VESICULAR_DERMATITIS") (action "Add") (id "Concept38") (object_description "Hypothesis.VESICULAR_DERMATITIS.Concept38") (entire_concept "Hypothesis.VESICULAR_DERMATITIS.Concept38") (source "ConsoleProtocolModule") (timestamp "1332507723294") (delay "-673056") (message_id "731") (message_id "731") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "7600") (source "ConsoleProtocolModule") (delay "-1332507715694") (message_id "1730") (message_id "1730") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="16" name="Finding Doesn't Refute Hypothesis" type="RefuteLink">
+    <Description>
+      Finding doesn't refute hypothesis in a sense that it in fact supports it.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Actually, &lt;finding&gt; supports &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the refute link between &lt;finding&gt; and &lt;hypothesis&gt; or replace it with a support link.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5922, 4074, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396550") (delay "200") (x "5922") (y "4074") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "935") (message_id "935") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept81") (object_description "Finding.Blister.Concept81") (entire_concept "Finding.Blister.Concept81") (source "ConsoleProtocolModule") (timestamp "1332508396750") (delay "200") (location "x=6512, y=3996, width=10, height=10") (power "high") (message_id "1221") (message_id "1221") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept82") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept82") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept82") (source "ConsoleProtocolModule") (timestamp "1332508396950") (delay "200") (message_id "1228") (message_id "1228") 
+      </Step>
+      <Step>
+        CE:  (type "RefuteLink") (label "Blister - ARTHROPOD_ASSAULT") (action "Add") (id "Concept83") (object_description "Finding.Blister.Concept81:Hypothesis.ARTHROPOD_ASSAULT.Concept82:RefuteLink.Blister - ARTHROPOD_ASSAULT.Concept83") (entire_concept "Finding.Blister.Concept81:Hypothesis.ARTHROPOD_ASSAULT.Concept82:RefuteLink.Blister - ARTHROPOD_ASSAULT.Concept83") (source "ConsoleProtocolModule") (timestamp "1332508397150") (parent "Finding.Blister.Concept81:Hypothesis.ARTHROPOD_ASSAULT.Concept82") (delay "200") (message_id "1233") (message_id "1233") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "7800") (source "ConsoleProtocolModule") (delay "-1332508389350") (message_id "1744") (message_id "1744") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="12" name="Finding No Longer Refutes Hypothesis" type="RefuteLink">
+    <Description>
+      This is usually happens when attribute is removed from a finding. This may make a finding no longer refute the hypothesis,
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Finding &lt;finding&gt; no longer refutes hypothesis &lt;hypothesis&gt;
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the refute link between &lt;finding&gt; and &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1334172502820") (message_id "1996") (message_id "1996") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5972, 4010, 0.5)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172503420") (x "5972") (y "4010") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "2169") (message_id "2169") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept16") (object_description "Finding.Blister.Concept16") (entire_concept "Finding.Blister.Concept16") (source "ArcNodeInterface") (timestamp "1334172503220") (location "x=6416, y=4198, width=10, height=10") (power "high") (message_id "2182") (message_id "2182") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5972, 4010, 0.5)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334172503420") (x "5972") (y "4010") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "2169") (message_id "2169") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept18") (object_description "Finding.Neutrophils.Concept18") (entire_concept "Finding.Neutrophils.Concept18") (source "ArcNodeInterface") (timestamp "1334172503620") (location "x=6326, y=4274, width=10, height=10") (power "high") (message_id "2195") (message_id "2195") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Isolated") (action "Add") (parent "Finding.Neutrophils.Concept18") (id "Concept19") (object_description "Finding.Neutrophils.Concept18:Attribute.Isolated.Concept19") (entire_concept "Finding.Isolated_Neutrophils.Concept20") (source "ArcNodeInterface") (timestamp "1334172503820") (message_id "2205") (message_id "2205") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "FIXED_DRUG_ERUPTION") (action "Add") (id "Concept21") (object_description "Hypothesis.FIXED_DRUG_ERUPTION.Concept21") (entire_concept "Hypothesis.FIXED_DRUG_ERUPTION.Concept21") (source "ArcNodeInterface") (timestamp "1334172504020") (message_id "2217") (message_id "2217") 
+      </Step>
+      <Step>
+        CE:  (type "RefuteLink") (label "Isolated_Neutrophils - FIXED_DRUG_ERUPTION") (action "Add") (id "Concept22") (object_description "Finding.Isolated_Neutrophils.Concept20:Hypothesis.FIXED_DRUG_ERUPTION.Concept21:RefuteLink.Isolated_Neutrophils - FIXED_DRUG_ERUPTION.Concept22") (entire_concept "Finding.Isolated_Neutrophils.Concept20:Hypothesis.FIXED_DRUG_ERUPTION.Concept21:RefuteLink.Isolated_Neutrophils - FIXED_DRUG_ERUPTION.Concept22") (source "ArcNodeInterface") (timestamp "1334172504220") (parent "Finding.Isolated_Neutrophils.Concept20:Hypothesis.FIXED_DRUG_ERUPTION.Concept21") (message_id "2222") (message_id "2222") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Isolated") (action "Delete") (parent "Finding.Neutrophils.Concept18") (id "Concept19") (object_description "Finding.Neutrophils.Concept18:Attribute.Isolated.Concept19") (entire_concept "Finding.Isolated_Neutrophils.Concept20") (source "ArcNodeInterface") (timestamp "1334172504420") (message_id "2228") (message_id "2228") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="14" name="No Evidence that Finding Refutes Hypothesis" type="RefuteLink">
+    <Description>
+      If refute link is explicit as oppose to not-support, then this is thrown whene finding doesn't necessary refute hypothesis.
+
+##SimpleDiagnosticReasoner.refute.inference.mode=refute##
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          &lt;finding&gt; does not necessarily refute &lt;hypothesis&gt;. While it does not support this hypothesis, it does not refute it either.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Remove the refute link between &lt;finding&gt; and &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1334176155013") (message_id "1084") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5578, 3164, 0.25)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334176155813") (x "5578") (y "3164") (width "2192") (height "1692") (scale "0.25") (auto "false") (message_id "1148") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept25") (object_description "Finding.Blister.Concept25") (entire_concept "Finding.Blister.Concept25") (source "ArcNodeInterface") (timestamp "1334176155413") (location "x=6562, y=3784, width=10, height=10") (power "medium") (message_id "1154") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept26") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept26") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept26") (source "ArcNodeInterface") (timestamp "1334176155613") (message_id "1164") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5578, 3164, 0.25)") (action "ViewChanged") (source "SimpleViewerPanel") (timestamp "1334176155813") (x "5578") (y "3164") (width "2192") (height "1692") (scale "0.25") (auto "false") (message_id "1148") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept27") (object_description "Finding.Neutrophils.Concept27") (entire_concept "Finding.Neutrophils.Concept27") (source "ArcNodeInterface") (timestamp "1334176156013") (location "x=7070, y=3984, width=10, height=10") (power "medium") (message_id "1173") 
+      </Step>
+      <Step>
+        CE:  (type "RefuteLink") (label "Neutrophils - ARTHROPOD_ASSAULT") (action "Add") (id "Concept29") (object_description "Finding.Neutrophils.Concept27:Hypothesis.ARTHROPOD_ASSAULT.Concept26:RefuteLink.Neutrophils - ARTHROPOD_ASSAULT.Concept29") (entire_concept "Finding.Neutrophils.Concept27:Hypothesis.ARTHROPOD_ASSAULT.Concept26:RefuteLink.Neutrophils - ARTHROPOD_ASSAULT.Concept29") (source "ArcNodeInterface") (timestamp "1334176156213") (parent "Finding.Neutrophils.Concept27:Hypothesis.ARTHROPOD_ASSAULT.Concept26") (message_id "1178") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1334176156413") (message_id "1184") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="11" name="Finding Doesn't Support Hypothesis" type="SupportLink">
+    <Description>
+      Finding doesn't explicitly support hypothesis.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Finding &lt;finding&gt; doesn't explicitly support &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the support link between &lt;finding&gt; and &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6264, 4072, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507938462") (delay "-457888") (x "6264") (y "4072") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "753") (message_id "753") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Nuclear_Dust") (action "Add") (id "Concept45") (object_description "Finding.Nuclear_Dust.Concept45") (entire_concept "Finding.Nuclear_Dust.Concept45") (source "ConsoleProtocolModule") (timestamp "1332507938262") (delay "-200") (location "x=7564, y=4908, width=10, height=10") (power "medium") (message_id "838") (message_id "838") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(6264, 4072, 0.25)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332507938462") (delay "200") (x "6264") (y "4072") (width "2204") (height "1692") (scale "0.25") (auto "false") (message_id "753") (message_id "753") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept46") (object_description "Finding.Blister.Concept46") (entire_concept "Finding.Blister.Concept46") (source "ConsoleProtocolModule") (timestamp "1332507938662") (delay "200") (location "x=6352, y=4272, width=10, height=10") (power "medium") (message_id "847") (message_id "847") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "ARTHROPOD_ASSAULT") (action "Add") (id "Concept47") (object_description "Hypothesis.ARTHROPOD_ASSAULT.Concept47") (entire_concept "Hypothesis.ARTHROPOD_ASSAULT.Concept47") (source "ConsoleProtocolModule") (timestamp "1332507938862") (delay "200") (message_id "854") (message_id "854") 
+      </Step>
+      <Step>
+        CE:  (type "SupportLink") (label "Nuclear_Dust - ARTHROPOD_ASSAULT") (action "Add") (id "Concept48") (object_description "Finding.Nuclear_Dust.Concept45:Hypothesis.ARTHROPOD_ASSAULT.Concept47:SupportLink.Nuclear_Dust - ARTHROPOD_ASSAULT.Concept48") (entire_concept "Finding.Nuclear_Dust.Concept45:Hypothesis.ARTHROPOD_ASSAULT.Concept47:SupportLink.Nuclear_Dust - ARTHROPOD_ASSAULT.Concept48") (source "ConsoleProtocolModule") (timestamp "1332507939062") (parent "Finding.Nuclear_Dust.Concept45:Hypothesis.ARTHROPOD_ASSAULT.Concept47") (delay "200") (message_id "859") (message_id "859") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "8200") (source "ConsoleProtocolModule") (delay "-1332507930862") (message_id "1788") (message_id "1788") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="14" name="Finding No Longer Supports Hypothesis" type="SupportLink">
+    <Description>
+      After you specified a finding futher, hypothesis is no longer supported.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Finding &lt;finding&gt; no longer supports hypothesis &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the support link between &lt;finding&gt; and &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5922, 4074, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396550") (delay "200") (x "5922") (y "4074") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "935") (message_id "935") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept67") (object_description "Finding.Neutrophils.Concept67") (entire_concept "Finding.Neutrophils.Concept67") (source "ConsoleProtocolModule") (timestamp "1332508208638") (delay "-187912") (location "x=6292, y=4292, width=10, height=10") (power "high") (message_id "1071") (message_id "1071") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "SWEETS_SYNDROME") (action "Add") (id "Concept68") (object_description "Hypothesis.SWEETS_SYNDROME.Concept68") (entire_concept "Hypothesis.SWEETS_SYNDROME.Concept68") (source "ConsoleProtocolModule") (timestamp "1332508208838") (delay "200") (message_id "1078") (message_id "1078") 
+      </Step>
+      <Step>
+        CE:  (type "SupportLink") (label "Neutrophils - SWEETS_SYNDROME") (action "Add") (id "Concept69") (object_description "Finding.Neutrophils.Concept67:Hypothesis.SWEETS_SYNDROME.Concept68:SupportLink.Neutrophils - SWEETS_SYNDROME.Concept69") (entire_concept "Finding.Neutrophils.Concept67:Hypothesis.SWEETS_SYNDROME.Concept68:SupportLink.Neutrophils - SWEETS_SYNDROME.Concept69") (source "ConsoleProtocolModule") (timestamp "1332508209038") (parent "Finding.Neutrophils.Concept67:Hypothesis.SWEETS_SYNDROME.Concept68") (delay "200") (message_id "1083") (message_id "1083") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Isolated") (action "Add") (parent "Finding.Neutrophils.Concept67") (id "Concept70") (object_description "Finding.Neutrophils.Concept67:Attribute.Isolated.Concept70") (entire_concept "Finding.Isolated_Neutrophils.Concept71") (source "ConsoleProtocolModule") (timestamp "1332508209238") (delay "200") (message_id "1090") (message_id "1090") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "8400") (source "ConsoleProtocolModule") (delay "-1332508200838") (message_id "1815") (message_id "1815") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="18" name="Finding's Parent Supports Hypothesis" type="SupportLink">
+    <Description>
+      While a more specific finding does not support this hypothesis, its parent feature does.
+    </Description>
+    <ErrorMessages>
+      <MessageEntry>
+        <Message>
+          Finding &lt;finding&gt; doesn't support &lt;hypothesis&gt;, however &lt;parent&gt; does.
+        </Message>
+      </MessageEntry>
+    </ErrorMessages>
+    <HintMessages>
+      <MessageEntry>
+        <Message>
+          Delete the support link between &lt;finding&gt; and &lt;hypothesis&gt;.
+        </Message>
+      </MessageEntry>
+    </HintMessages>
+    <StepSequence>
+      <Step>
+        PE:  (type "Start") (case_url "http://slidetutor.upmc.edu/curriculum/cases/skin/PITT/VesicularDermatitis/AP_12.case") (username "guest") (condition "Immediate") (domain_url "http://slidetutor.upmc.edu/curriculum/owl/skin/PITT/VesicularDermatitis.owl") (timestamp "1332508396350") (message_id "265") (source "ConsoleProtocolModule") (delay "1332508397016") (message_id "265") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5922, 4074, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396550") (delay "200") (x "5922") (y "4074") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "935") (message_id "935") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Blister") (action "Add") (id "Concept75") (object_description "Finding.Blister.Concept75") (entire_concept "Finding.Blister.Concept75") (source "ConsoleProtocolModule") (timestamp "1332508396750") (delay "200") (location "x=6556, y=3978, width=10, height=10") (power "high") (message_id "1164") (message_id "1164") 
+      </Step>
+      <Step>
+        CE:  (type "TutorViewer") (label "(5922, 4074, 0.5)") (action "ViewChanged") (source "ConsoleProtocolModule") (timestamp "1332508396950") (delay "200") (x "5922") (y "4074") (width "1102") (height "846") (scale "0.5") (auto "false") (message_id "935") (message_id "935") 
+      </Step>
+      <Step>
+        CE:  (type "Finding") (label "Neutrophils") (action "Add") (id "Concept76") (object_description "Finding.Neutrophils.Concept76") (entire_concept "Finding.Neutrophils.Concept76") (source "ConsoleProtocolModule") (timestamp "1332508397150") (delay "200") (location "x=6556, y=3978, width=10, height=10") (power "high") (message_id "1169") (message_id "1169") 
+      </Step>
+      <Step>
+        CE:  (type "Hypothesis") (label "SWEETS_SYNDROME") (action "Add") (id "Concept77") (object_description "Hypothesis.SWEETS_SYNDROME.Concept77") (entire_concept "Hypothesis.SWEETS_SYNDROME.Concept77") (source "ConsoleProtocolModule") (timestamp "1332508397350") (delay "200") (message_id "1176") (message_id "1176") 
+      </Step>
+      <Step>
+        CE:  (type "Attribute") (label "Isolated") (action "Add") (parent "Finding.Neutrophils.Concept76") (id "Concept78") (object_description "Finding.Neutrophils.Concept76:Attribute.Isolated.Concept78") (entire_concept "Finding.Isolated_Neutrophils.Concept79") (source "ConsoleProtocolModule") (timestamp "1332508397550") (delay "200") (message_id "1183") (message_id "1183") 
+      </Step>
+      <Step>
+        CE:  (type "SupportLink") (label "Isolated_Neutrophils - SWEETS_SYNDROME") (action "Add") (id "Concept80") (object_description "Finding.Isolated_Neutrophils.Concept79:Hypothesis.SWEETS_SYNDROME.Concept77:SupportLink.Isolated_Neutrophils - SWEETS_SYNDROME.Concept80") (entire_concept "Finding.Isolated_Neutrophils.Concept79:Hypothesis.SWEETS_SYNDROME.Concept77:SupportLink.Isolated_Neutrophils - SWEETS_SYNDROME.Concept80") (source "ConsoleProtocolModule") (timestamp "1332508397750") (parent "Finding.Isolated_Neutrophils.Concept79:Hypothesis.SWEETS_SYNDROME.Concept77") (delay "200") (message_id "1188") (message_id "1188") 
+      </Step>
+      <Step>
+        PE:  (type "End") (outcome "closed") (username "guest") (condition "Immediate") (timestamp "1332508397950") (source "ConsoleProtocolModule") (delay "200") (message_id "1844") (message_id "1844") 
+      </Step>
+    </StepSequence>
+  </ScenarioEntry>
+  <ScenarioEntry code="555" name="Removed Correct Concept" type="">
+    <Description>
+      Some concept was removed while correct. This is a state that serves as a marker and should not have any messages
+    </Description>
+    <ErrorMessages>
+    </ErrorMessages>
+    <HintMessages>
+    </HintMessages>
+    <StepSequence>
+    </StepSequence>
+  </ScenarioEntry>
+</ScenarioSet>

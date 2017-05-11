@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Request IMDTS Account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="accountpage">
+	  <h4>Request User Account</h4>
+	<form method="post" action="its/CreateUserServlet" name="form">
+	 <input type="hidden" name="action" value="create_user" />
+	<p>
+		  <label for="username">Username</label>
+		  <input class="text" type="text" name="username" /></p>
+	<p><label for="password">Password</label><input class="text" type="password" name="password" autocomplete="off" /></p>
+	<p><label for="rpassword">Confirm Password</label><input class="text" type="password" name="rpassword"/ autocomplete="off"></p>
+	<p><label for="affiliation">Affiliation</label><input class="text" type="text" name="affiliation" /></p>
+	<p><label for="specialty">Specialty</label><input class="text" type="text" name="specialty" /></p>
+	<p><label for="training">Pathology Resident</label> 
+	<input name="training" value="P1" type="radio" onclick="javascript:document.form.other.disabled=true">Year 1
+	<input name="training" value="P2" type="radio" onclick="javascript:document.form.other.disabled=true">Year 2
+	<input name="training" value="P3" type="radio" onclick="javascript:document.form.other.disabled=true">Year 3
+	<input name="training" value="P4" type="radio" onclick="javascript:document.form.other.disabled=true">Year 4
+	<input name="training" value="P5" type="radio" onclick="javascript:document.form.other.disabled=true">Year 5
+	<br/>
+	<label>Other</label><input name="training" value="otherradio" type="radio" onclick="javascript:document.form.other.disabled=false"><input class="text" type="text" name="other" disabled="disabled" style="width:19em" />
+
+	<p><label for="comment">Comments</label><textarea cols="33" rows="3" name="comment"></textarea></p>
+	<ul>
+	<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6Lef5skSAAAAAIPeT-OsTZiQ-Cao-MbBAycWaBP2">
+   </script>
+  <noscript>
+  	  <iframe src="http://www.google.com/recaptcha/api/noscript?k=6Lef5skSAAAAAIPeT-OsTZiQ-Cao-MbBAycWaBP2"
+         height="300" width="500" frameborder="0"></iframe><br>
+     <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+     </textarea>
+     <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+  </noscript>	
+	</ul>	
+	
+	
+	
+	<p>
+	  <label>&nbsp;</label><input id="submit" name="submit" type="submit" value="Submit" />
+	</p>
+	</form>
+</div>      
+</body>
+</html>

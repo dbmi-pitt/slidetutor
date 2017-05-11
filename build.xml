@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<!-- Written to assume that classpath is rooted in the current directory. -->
+<!-- So this should be OK if you make this script in the root of a filesystem. -->
+<!-- If not, you may prefer to adjust the basedir, or move some directories around. -->
+<!-- The idea is that both Ant and NetBeans have to know what the package root is -->
+<!-- for the classes in your application. -->
+<project name="TutorBuilder" basedir="." default="jar_Client">
+
+    <!-- Don't worry if you don't know the Ant syntax completely or need help on some tasks! -->
+    <!-- The standard Ant documentation is bundled. See Help | Shortcuts | Ant 1.3 Documentation. -->
+
+    
+	<property environment="env"/>
+	<!-- directories -->
+	<property name="lib.dir" value="lib"/>
+	<property name="src.dir" value="src"/>
+	<property name="resource.dir" value="resources"/>
+	<property name="icon.dir" value="icons"/>
+	<!-- buildc dir sits OUTSIDE the cvs -->
+	<property name="build.dir" value="../build"/>
+	<property name="build.classes" value="${build.dir}/classes"/>  
+	<property name="build.sign" value="${build.dir}/signed"/>  
+	<property name="build.lib" value="${build.dir}/jars"/>
+	
+	
+	<!-- 3rd party libraries -->
+	<property name="spacetree" value="spacetree-m.jar"/>
+	<property name="jdom" value="jdom.jar"/>
+	<property name="nlp" value="specialistTextTools.jar"/>
+	<property name="PathTutor" value="PathTutor.jar"/>
+	<property name="SlideViewer" value="SlideViewer.jar"/>
+	<property name="TextTools" value="TextTools.jar"/>
+	<property name="servlet" value="servlet-2_3.jar"/>
+	<property name="captcha" value="recaptcha4j-0.0.7.jar"/>
+	
+	<!-- libs for this projects -->
+	<property name="TutorBuilder" value="TutorBuilder.jar"/>
+	<property name="TutorServlet" value="TutorServlet.jar"/>
+	
+	
+	<!-- keystore stuff -->
+	<property name="keystore.location" value="doc/slidetutor_keystore"/>
+	<property name="keystore.alias" value="slidetutor"/>
+	<property name="keystore.pass"  value="slidetutor"/>
+	
+	<!-- installation path -->
+	<property name="target.dir" value="/mnt/xip_c/SunOne/docs/reporttutordev_docs/webapps/domainbuilder/"/> 
+	<!-- <property name="lib.target" value="${target.dir}/lib"/> -->
+	<property name="lib.target" value="${build.sign}/lib"/> 
+	<property name="weblib.dir" value="${target.dir}/WEB-INF/lib"/>
+	<property name="webcls.dir" value="${target.dir}/WEB-INF/classes"/>
+	
+	
+   <!-- CLASSPATH definitions -->
+	<path id="app.client.path">
+		<pathelement location="${lib.dir}/${spacetree}"/>
+		<pathelement location="${lib.dir}/${jdom}"/>
+	  	<pathelement location="${lib.dir}/${nlp}"/>
+	   	<pathelement location="${lib.dir}/${SlideViewer}"/>
+		<pathelement location="${lib.dir}/${TextTools}"/>
+		<pathelement location="${lib.dir}/${servlet}"/>
+		<pathelement location="${lib.dir}/${captcha}"/>
+  	 </path> 
+
+	<path id="app.server.path">
+		<pathelement location="${lib.dir}/${servlet}"/>
+	</path> 
+
+	<!-- targets -->
+	
+	<!-- Utility Targets -->
+	<target name="clean" depends="">
+        <delete dir="${build.classes}"/>
+		<delete dir="${build.lib}"/>
+		<delete dir="${build.sign}"/>
+    </target>
+    
+    <target name="all" depends="" description="Build, Move everything.">
+        <echo message="Application built. No Problems!"/>
+    </target>
+	
+	<!-- create build directories???? (I don't know if it is necessary thought) -->
+    <target name="makedirs" depends="">
+    	<mkdir dir="${build.dir}"/>
+    	<mkdir dir="${build.classes}"/>
+		<mkdir dir="${build.classes}/icons"/>	
+		<mkdir dir="${build.classes}/resources"/>	
+    	<mkdir dir="${build.lib}"/>
+		<mkdir dir="${build.sign}"/>
+    </target>
+	
+	<!-- compile client code -->
+    <target name="compile_Client" depends="makedirs">
+        <javac srcdir="${src.dir}" destdir="${build.classes}" debug="true" deprecation="true" classpathref="app.client.path" source="1.5" target="1.5">
+            <include name="**/tutor/**"/>
+        </javac>
+    </target>
+    
+	<target name="jar_Servlet" depends="compile_Client" description="Build servlet">
+		<copy todir="${build.classes}/${resource.dir}">
+		    <fileset dir="${resource.dir}" includes="**" />
+		</copy>	
+		<jar jarfile="${build.lib}/${TutorServlet}" basedir="${build.classes}" >
+    		<include name="**/tutor/servlet/**"/>
+		  	<include name="**/tutor/messages/**"/>
+			<include name="**/tutor/util/**"/>
+			<include name="**/tutor/beans/Action.class"/>
+			<include name="**/tutor/model/ProtocolModule.class"/>
+			<include name="**/tutor/model/TutorModule.class"/>
+			<include name="**/tutor/modules/protocol/DatabaseProtocolModule**"/>
+			<include name="**/resources/defaults/DatabaseProtocolModule.properties"/>
+			<include name="**/resources/jnlp/**"/>
+        </jar>
+    </target>
+	
+    <target name="jar_Client" depends="compile_Client" description="Build, Move everything.">
+    	<delete>
+		<fileset dir="${build.classes}/resources" includes="**"/>
+	</delete>
+    	<delete>
+		<fileset dir="${build.classes}/icons" includes="**"/>
+	</delete>
+    	<copy todir="${build.classes}/${icon.dir}">
+		<fileset dir="${icon.dir}" includes="**" />
+
+    	</copy>	
+    	<copy todir="${build.classes}/${resource.dir}">
+    		<fileset dir="${resource.dir}" includes="**" />
+    	
+    	</copy>	
+    	<jar jarfile="${build.lib}/${TutorBuilder}" 
+             basedir="${build.classes}" >
+    		 <manifest>
+    		 	<attribute name="Main-Class" value="edu.pitt.dbmi.tutor.ITS"/>
+		 		<attribute name="Permissions" value="all-permissions"/>
+		 		<attribute name="Codebase" value="*"/>
+    		 	<!-- <attribute name="Trusted-Only" value="true"/> -->
+    		 </manifest>
+			 <include name="**/tutor/**"/>
+    		 <include name="**/resources/**"/>
+    		 <include name="**/icons/**"/>
+        </jar>
+    	<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/${TutorBuilder}"/>
+    </target>
+
+
+	<target name="sign_Client">
+		<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/SlideViewer.jar"/>
+		<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/TextTools.jar"/>
+		
+		<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/protege.jar"/>
+		<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/protege-owl.jar"/>
+		<signjar alias="${keystore.alias}" keystore="${keystore.location}" storepass="${keystore.pass}" jar="${build.lib}/protege-owl-inference.jar"/>
+	</target>
+	
+	
+	
+	<!--======================<  DEPLOY  >======================-->
+	<!--
+	<target name="deploy_Client" depends="jar_Client" >
+		<copy todir="${lib.target}" includeEmptyDirs="no">
+	  		<fileset dir="${build.lib}"> 
+	  			<include name="${DomainBuilder}"/>
+	 		</fileset>
+		</copy>
+	
+    </target>
+-->
+
+</project>

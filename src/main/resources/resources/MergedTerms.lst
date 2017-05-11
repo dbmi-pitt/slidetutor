@@ -1,0 +1,3 @@
+# this is a list of terms that might be mreged
+# that is appended to eachother: Ex 1.3mm
+([\d\.]+)(mm|cm|nm|km|m)

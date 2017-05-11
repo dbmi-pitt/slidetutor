@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Behavior>
+  <Task>
+    <Condition condition="Expression" operation="and">
+      <Condition condition="User Action" input="type:Done" operation="=">
+      </Condition>
+      <Condition condition="Tutor Response" input="Confirm" operation="=">
+      </Condition>
+    </Condition>
+    <Action action="finishCase" input="SlideTutor" receiver="Tutor">
+    </Action>
+  </Task>
+  <Task>
+    <Condition condition="Expression" operation="and">
+      <Condition condition="User Action" input="type:Done" operation="=">
+      </Condition>
+      <Condition condition="Tutor Response" input="Failure" operation="=">
+      </Condition>
+    </Condition>
+    <Action action="promptUser" receiver="Tutor">
+      It looks like you have not solved this case yet.&lt;p&gt;Would you like to see the results and go to the next case?[prompt|yes;no]
+    </Action>
+  </Task>
+  <Task>
+    <Condition condition="User Action" operation="=">
+      label:It looks like you have not solved this case yet.&lt;p&gt;Would you like to see the results and go to the next case? = yes
+    </Condition>
+    <Action action="autoHint" input="instant" receiver="FeedbackModule">
+    </Action>
+    <Action action="finishCase" input="" receiver="Tutor">
+    </Action>
+  </Task>
+</Behavior>

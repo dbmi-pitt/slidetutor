@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<report name="REPORT">
+	<history name="PATIENT HISTORY" editable="false" value="patient_history"/>
+	<procedure name="PROCEDURE" editable="false" value="procedure"/>
+	<diagnosis name="FINAL DIAGNOSIS" editable="true"  value="final_diagnosis"/>
+	<comment name="COMMENT" editable="true"  value="comment"/>
+	<gross name="GROSS DESCRIPTION" editable="false" value="gross_description"/>
+	<microscopic name="MICROSCOPIC" editable="true"  value="microscopic"/>
+</report>

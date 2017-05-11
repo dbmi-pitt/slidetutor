@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Behavior>
+<!--  
+  <Task>
+    <Condition condition="User Action Count" operation="interval" input="(6)"/>
+    <Action action="feedbackMode" input="hint,error,color" receiver="FeedbackModule"/>
+  </Task>
+  <Task>
+    <Condition condition="User Action Count" operation="interval" input="(6,3)"/>
+    <Action action="feedbackMode" input="none" receiver="FeedbackModule"/>
+  </Task>
+ -->
+ <Task>
+ 	<Condition condition="Expression" operation="and">
+		<Condition condition="User Action" operation="=" input="type:Done"/>
+		<Condition condition="Tutor Response" operation="=" input="Confirm"/>
+	</Condition>
+	<Action receiver="Tutor" action="finishCase" input=""/>
+ </Task>
+<!--
+ <Task>
+	<Condition condition="Expression" operation="and">
+		<Condition condition="User Action" operation="=" input="type:Done"/>
+		<Condition condition="User Action" operation="=" input="label:ArcNodeInterface"/>
+	</Condition>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.interfaces.ColorBookInterface"/>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.feedback.DialogManager"/>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.reasoning.MetaCognitiveReasoner"/>
+ </Task>
+ <Task>
+	<Condition condition="Expression" operation="and">
+		<Condition condition="User Action" operation="=" input="type:Done"/>
+		<Condition condition="User Action" operation="=" input="label:ColorBookInterface"/>
+	</Condition>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.interfaces.ArcNodeInterface"/>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.feedback.HelpManager"/>
+	<Action receiver="Tutor" action="switchTutorModule" input="edu.pitt.dbmi.tutor.modules.reasoning.SimpleDiagnosticReasoner"/>
+ </Task>
+-->
+ 
+</Behavior>

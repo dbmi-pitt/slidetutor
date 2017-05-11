@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>SlideTutor - University of Pittsburgh</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript">
+<!--
+var highlightId;
+
+// load sites by clicking 
+function loadSite(site) {
+	frame.location.href=site;
+}
+//highlight appropriate site
+function highlight(id){
+	highlightId = id;
+	for(var i=1;i<=14;i++){
+		//document.getElementById("ref"+i).style.fontStyle="normal";
+		if(i == 1 || i == 7){
+			document.getElementById("ref"+i).style.backgroundColor='#e6e6f0';
+		}else{
+			document.getElementById("ref"+i).style.backgroundColor='#f5f9fd';
+		}	
+	}
+	//document.getElementById(id).style.fontStyle="oblique";
+	document.getElementById(id).style.backgroundColor='#96cbca';
+}
+// highlight button
+function lightButton(id,over,header){
+	if(over){
+		id.style.backgroundColor='#96cbca';
+	}else if(header && highlightId != id.id){
+		id.style.backgroundColor='#e6e6f0';
+	}else if(highlightId != id.id){
+		id.style.backgroundColor='#f5f9fd';
+	}	
+}
+
+//-->
+</script>
+</head>
+<body>
+<div style="height: 100%; width: 100%;" align="center">
+<table class="container" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody>
+<tr>
+<td class="leftshadow"><img src="images/spacer.gif" width="40"></td>
+<td class="websiteback" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody>
+<tr>
+<td class="banner">
+Medical Tutor Laboratory at
+DBMI, University of
+Pittsburgh
+</td>
+<td class="banner" style="width: 72px;"><img style="width: 70px; height: 70px;" alt="" src="images/dbmi-logo-sm.gif" align="middle"></td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1" style="vertical-align: top;">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody>
+<tr>
+<td class="pagetopspacing" style="vertical-align: top;"><img src="images/spacer.gif" height="10" width="1"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"></td>
+</tr>
+<tr>
+<!-- -I had to insert 500cm to get Safari to render page semi correctly   -->
+<td style="vertical-align: top; height: 100%; width:500cm;">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody>
+<tr>
+<td> <img src="images/spacer.gif" width="9"> </td>
+<td style="vertical-align: top;">
+<table style="border-right: 1px solid rgb(220, 220, 220); width: 160px;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td height="3" width="10" bgcolor="#757575"></td>
+<td height="3"  bgcolor="#757575"></td>
+</tr>
+<tr style="font-weight: bold;">
+<td width="5" bgcolor="#757575"></td>
+<td class="headerbutton" onmouseover="lightButton(this,true,true);"  id='ref1' 
+    onmouseout="lightButton(this,false,true);" onclick="loadSite('use.html');">
+<div style="text-align: left;"><a target="frame" href="use.html">SlideTutor</a></div>
+</td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);" 
+    onclick="loadSite('about.html');" id='ref2'>
+<a target="frame" href="about.html">About SlideTutor</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);" onclick="loadSite('use.html');"  id='ref3'> <a target="frame" href="use.html">Use SlideTutor</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('training.html');"  id='ref4'> <a target="frame" href="training.html">Documentation</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('faq.html');"  id='ref5'> <a target="frame" href="faq.html">FAQ</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('feedback.html');"  id='ref6'> <a target="frame" href="feedback.html">Feedback</a></td>
+</tr>
+<tr>
+<td height="3" width="5" bgcolor="#757575"></td>
+<td height="3"  bgcolor="#757575"></td>
+</tr>
+<tr style="font-weight: bold;">
+<td width="5" bgcolor="#757575"></td>
+<td class="headerbutton"onmouseover="lightButton(this,true,true);" onmouseout="lightButton(this,false,true);"  onclick="loadSite('lab.html');"  id='ref7'> <a target="frame" href="lab.html">Laboratory</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('people.html');"  id='ref8'> <a target="frame" href="people.html">People</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);" onclick="loadSite('research.html');" id='ref9'> <a target="frame" href="research.html" >Research</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);" onclick="loadSite('publications.html');"  id='ref10'> <a target="frame" href="publications.html">Publications</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('recognition.html');" id='ref11'> <a target="frame" href="recognition.html" >Acknowledgements</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('awards.html');"  id='ref12'> <a target="frame" href="awards.html">Awards</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('funding.html');" id='ref13'> <a target="frame" href="funding.html" >Funding</a></td>
+</tr>
+<tr>
+<td width="5" bgcolor="#757575"></td>
+<td class="button" onmouseover="lightButton(this,true,false);" onmouseout="lightButton(this,false,false);"  onclick="loadSite('contact.html');"  id='ref14'> <a target="frame" href="contact.html">Contact Us</a></td>
+</tr>
+<tr>
+<td height="3" width="5" bgcolor="#757575"></td>
+<td height="3"  bgcolor="#757575"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="page"><!-- this is where main page goes -->
+<iframe src="use.html" class="frame" name="frame" frameborder="0" height="100%" width="100%"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1" style="vertical-align: top;"> </td>
+</tr>
+</tbody>
+</table>
+<br>
+</td>
+<td class="rightshadow"><img src="images/spacer.gif" width="40"></td>
+</tr>
+<tr>
+<td class="footer" colspan="3"> Last Updated:
+05/11/2006 | Supported by: <a href="http://www.cancer.gov/" target="_blank">NCI</a>, <a href="http://www.nlm.nih.gov/" target="_blank">NLM</a>
+| <a href="http://www.upmc.edu" target="_blank">UPMC</a>
+| <a href="contact.html" target="frame">Contact Us</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body></html>

@@ -1,0 +1,8 @@
+AP_72?question.type=identify
+AP_11?question.type=link
+AP_15?question.type=infer
+AP_19?question.type=report
+AP_22?question.type=solve
+AP_11?question.type=free.text&question=What feature is displayed on the slide
+AP_15?question.type=point.out&question=Please identify fibrosis on the slide
+AP_19?question.type=multiple.choice&question=What is the taller building&answers=eifel tower, cn tower, pyramids of giza

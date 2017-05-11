@@ -1,0 +1,5 @@
+solve 		= 	Please solve the given case by identifying appropriate findings, hypotheses and diagnoses.
+report 		=	Please write a prognostic report for the given case. Be sure to include all relevant reportable findings.
+link		=	For every finding please draw a link to each hypothesis that is supported by that finding.
+infer		=	Please use the given findings to infer the possible diagnosis/diagnoses that are best represented by the list of findings.
+identify	=	Please identify the feature that the arrow is referencing. Be sure to be as specific and/or descriptive as possible.
